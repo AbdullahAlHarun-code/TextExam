@@ -49,3 +49,19 @@ when i select Area, Sub Area, Sub Sub Area
 then i press start test button only selected categories questions will be come in the mock test
 
 then user can start mock test 
+
+------------------
+git branch -m master main         # rename local branch to 'main'
+git branch -d master  # only if you're sure main replaces it
+git push -u origin main           # push it to remote
+main → production releases
+
+develop → stable development version
+
+feature/* → for new features
+
+hotfix/* → for emergency fixes
+
+release/* → for release prep
+
+bugfix/* → for fixing non-urgent bugs
