@@ -1,0 +1,97 @@
+Area
+	Kildare
+		Major
+			Naas
+            Newbridge
+            Maynooth
+            Celbridge
+            Leixlip
+            Kildare (Town)
+            Athy
+            Kilcock
+            Clane
+            Monasterevin
+            Kilcullen
+            Rathangan
+            Sallins
+            Prosperous
+            Kill
+		Minor 
+	        Allen
+            Allenwood
+            Ardclough
+            Athgarvan
+            Ballitore
+            Ballymore Eustace
+            Ballyoulster
+            Calverstown
+            Caragh
+            Carbury
+            Castledermot
+            Coill Dubh
+            Curragh
+            Derrinturn
+            Eadestown
+            Johnstown
+            Johnstownbridge
+            Kilberry
+            Kildangan
+            Kilmead
+            Kilmeage
+            Kilteel
+            Ladytown
+            Lullymore
+            Maddenstown
+            Milltown
+            Moone
+            Narraghmore
+            Nurney
+            Rathcoffey
+            Rathmore
+            Robertstown
+            Staplestown
+            Straffan
+            Suncroft
+            Timolin
+
+	Dublin
+        Major Dublin
+        Minor Dublin
+Places
+    Churches and Cathedrals         
+    Hospitals and Medical Centres
+    Nursing Homes
+    Schools and Educational Institutions
+    Libraries
+    Restaurants
+    Pubs and Bars
+    Hotels and Guesthouses
+    Museums and Galleries
+    Cinemas and Theatres
+    Shopping Centres and Retail Parks
+    Sports Clubs and Leisure Facilities
+    Racecourses
+    Parks and Gardens
+    Heritage Sites and Monuments
+    Garda Stations
+    Post Offices and Civic Services
+    Train Stations and Transport Hubs
+    Business and Industrial Parks
+    Housing Estates
+    Town Halls and Municipal Buildings
+    One-Way Streets
+    Main Roads
+    Minor Roads
+    Road Numbers
+    Routes from This Area to Another
+    Towns/Villages Passed Through on Routes
+    Connecting Road Junctions and Roundabouts 
+
+Mark
+	Below 70%
+	70% but below 80%
+	80% but below 90%
+	90% and over
+Industry
+	Fares
+	Accessibility 
