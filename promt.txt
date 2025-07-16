@@ -65,3 +65,5 @@ hotfix/* → for emergency fixes
 release/* → for release prep
 
 bugfix/* → for fixing non-urgent bugs
+------------------------
+from remote repository develop
