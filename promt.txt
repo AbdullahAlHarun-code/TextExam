@@ -67,3 +67,7 @@ release/* → for release prep
 bugfix/* → for fixing non-urgent bugs
 ------------------------
 from remote repository develop
+
+-------------------------
+http://127.0.0.1:8000/exam/mock-test/ in this page there are three category 
+i want first main category name like area, industry i mean all root category
