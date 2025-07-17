@@ -66,6 +66,9 @@
     .select2-results__option[data-level="3"] {
         padding-left: 4em;
     }
+    .select2-results__option[data-level="4"] {
+        padding-left: 5em;
+    }
 </style>
 {% endblock %}
 
@@ -149,6 +152,14 @@
                                             </label>
                                             <select id="subSubCategory" class="form-select form-select-sm category-select" disabled>
                                                 <option value="">Select Sub Sub Category...</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="subSubSubCategory" class="form-label small fw-bold">
+                                                <i class="fas fa-file-alt me-1"></i>Sub Sub Sub Category
+                                            </label>
+                                            <select id="subSubSubCategory" class="form-select form-select-sm category-select" disabled>
+                                                <option value="">Select Sub Sub Sub Category...</option>
                                             </select>
                                         </div>
                                     </div>
@@ -477,6 +488,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const mainCategory = document.getElementById('mainCategory');
     const subCategory = document.getElementById('subCategory');
     const subSubCategory = document.getElementById('subSubCategory');
+    const subSubSubCategory = document.getElementById('subSubSubCategory');
     const addCategoryBtn = document.getElementById('addCategoryBtn');
     const selectedCategoriesList = document.getElementById('selectedCategoriesList');
     const emptyState = document.getElementById('emptyState');
@@ -509,15 +521,22 @@ document.addEventListener('DOMContentLoaded', function() {
     $(mainCategory).on('change', function() {
         handleCategoryChange(this, subCategory);
         resetCategory(subSubCategory);
+        resetCategory(subSubSubCategory);
         updateAddButton();
     });
     
     $(subCategory).on('change', function() {
         handleCategoryChange(this, subSubCategory);
+        resetCategory(subSubSubCategory);
         updateAddButton();
     });
     
     $(subSubCategory).on('change', function() {
+        handleCategoryChange(this, subSubSubCategory);
+        updateAddButton();
+    });
+    
+    $(subSubSubCategory).on('change', function() {
         updateAddButton();
     });
     
@@ -635,7 +654,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     function getDeepestSelectedCategory() {
         // Get the deepest selected category
-        if (subSubCategory.value) {
+        if (subSubSubCategory.value) {
+            return createCategoryObject(subSubSubCategory);
+        } else if (subSubCategory.value) {
             return createCategoryObject(subSubCategory);
         } else if (subCategory.value) {
             return createCategoryObject(subCategory);
