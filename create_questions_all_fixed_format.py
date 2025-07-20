@@ -20,12 +20,15 @@ choices1 = [
     {"text": "Lexlip and Maynooth", "label": "D", "is_correct": False},
 ]
 for choice in choices1:
-    Choice.objects.create(
-        question=question1,
-        choice_text=choice["text"],
-        option_label=choice["label"],
-        is_correct=choice["is_correct"]
-    )
+    try:
+        Choice.objects.create(
+            question=question1,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q1] Failed to create choice {choice['label']}: {e}")
 
 # === Question 2 ===
 question2 = Question.objects.create(
@@ -47,12 +50,15 @@ choices2 = [
     {"text": "Ballymany", "label": "D", "is_correct": False},
 ]
 for choice in choices2:
-    Choice.objects.create(
-        question=question2,
-        choice_text=choice["text"],
-        option_label=choice["label"],
-        is_correct=choice["is_correct"]
-    )
+    try:
+        Choice.objects.create(
+            question=question2,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q2] Failed to create choice {choice['label']}: {e}")
 
 # === Question 3 ===
 question3 = Question.objects.create(
@@ -74,12 +80,15 @@ choices3 = [
     {"text": "Monread Road", "label": "D", "is_correct": False},
 ]
 for choice in choices3:
-    Choice.objects.create(
-        question=question3,
-        choice_text=choice["text"],
-        option_label=choice["label"],
-        is_correct=choice["is_correct"]
-    )
+    try:
+        Choice.objects.create(
+            question=question3,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q3] Failed to create choice {choice['label']}: {e}")
 
 # === Question 4 ===
 question4 = Question.objects.create(
@@ -99,9 +108,17 @@ choices4 = [
     {"text": "Parson St", "label": "C", "is_correct": False},
     {"text": "Kilcock Rd", "label": "D", "is_correct": False},
 ]
-for choice_data in choices4:
-    Choice.objects.create(question=question4, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question4.save()
+for choice in choices4:
+    try:
+        Choice.objects.create(
+            question=question4,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q4] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 5 ===
 question5 = Question.objects.create(
@@ -121,9 +138,17 @@ choices5 = [
     {"text": "Station Road", "label": "C", "is_correct": False},
     {"text": "Standhouse Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices5:
-    Choice.objects.create(question=question5, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question5.save()
+for choice in choices5:
+    try:
+        Choice.objects.create(
+            question=question5,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q5] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 6 ===
 question6 = Question.objects.create(
@@ -143,9 +168,17 @@ choices6 = [
     {"text": "Barrettstown Road", "label": "C", "is_correct": False},
     {"text": "Station Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices6:
-    Choice.objects.create(question=question6, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question6.save()
+for choice in choices6:
+    try:
+        Choice.objects.create(
+            question=question6,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q6] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 7 ===
 question7 = Question.objects.create(
@@ -165,9 +198,17 @@ choices7 = [
     {"text": "Dublin Road", "label": "C", "is_correct": False},
     {"text": "Abbey Street", "label": "D", "is_correct": False},
 ]
-for choice_data in choices7:
-    Choice.objects.create(question=question7, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question7.save()
+for choice in choices7:
+    try:
+        Choice.objects.create(
+            question=question7,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q7] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 8 ===
 question8 = Question.objects.create(
@@ -187,9 +228,17 @@ choices8 = [
     {"text": "Tipper Road", "label": "C", "is_correct": False},
     {"text": "Dublin Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices8:
-    Choice.objects.create(question=question8, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question8.save()
+for choice in choices8:
+    try:
+        Choice.objects.create(
+            question=question8,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q8] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 9 ===
 question9 = Question.objects.create(
@@ -209,9 +258,17 @@ choices9 = [
     {"text": "R413 and R415", "label": "C", "is_correct": False},
     {"text": "N80 and R413", "label": "D", "is_correct": False},
 ]
-for choice_data in choices9:
-    Choice.objects.create(question=question9, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question9.save()
+for choice in choices9:
+    try:
+        Choice.objects.create(
+            question=question9,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q9] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 10 ===
 question10 = Question.objects.create(
@@ -231,9 +288,17 @@ choices10 = [
     {"text": "Monread Road", "label": "C", "is_correct": False},
     {"text": "Tipper Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices10:
-    Choice.objects.create(question=question10, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question10.save()
+for choice in choices10:
+    try:
+        Choice.objects.create(
+            question=question10,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q10] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 11 ===
 question11 = Question.objects.create(
@@ -253,9 +318,17 @@ choices11 = [
     {"text": "Sallins", "label": "C", "is_correct": False},
     {"text": "Kill", "label": "D", "is_correct": False},
 ]
-for choice_data in choices11:
-    Choice.objects.create(question=question11, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question11.save()
+for choice in choices11:
+    try:
+        Choice.objects.create(
+            question=question11,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q11] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 12 ===
 question12 = Question.objects.create(
@@ -275,9 +348,17 @@ choices12 = [
     {"text": "Maynooth and Rathcoffee", "label": "C", "is_correct": False},
     {"text": "Lexlip and Maynooth", "label": "D", "is_correct": False},
 ]
-for choice_data in choices12:
-    Choice.objects.create(question=question12, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question12.save()
+for choice in choices12:
+    try:
+        Choice.objects.create(
+            question=question12,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q12] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 13 ===
 question13 = Question.objects.create(
@@ -297,9 +378,17 @@ choices13 = [
     {"text": "Tea Ln", "label": "C", "is_correct": False},
     {"text": "Clane Rd", "label": "D", "is_correct": False},
 ]
-for choice_data in choices13:
-    Choice.objects.create(question=question13, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question13.save()
+for choice in choices13:
+    try:
+        Choice.objects.create(
+            question=question13,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q13] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 14 ===
 question14 = Question.objects.create(
@@ -319,9 +408,17 @@ choices14 = [
     {"text": "Kill", "label": "C", "is_correct": False},
     {"text": "Straffan", "label": "D", "is_correct": True},
 ]
-for choice_data in choices14:
-    Choice.objects.create(question=question14, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question14.save()
+for choice in choices14:
+    try:
+        Choice.objects.create(
+            question=question14,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q14] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 15 ===
 question15 = Question.objects.create(
@@ -341,9 +438,17 @@ choices15 = [
     {"text": "Kilmeage; Clane; & Kill", "label": "C", "is_correct": False},
     {"text": "Clane, Newbridge; & Kill", "label": "D", "is_correct": False},
 ]
-for choice_data in choices15:
-    Choice.objects.create(question=question15, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question15.save()
+for choice in choices15:
+    try:
+        Choice.objects.create(
+            question=question15,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q15] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 16 ===
 question16 = Question.objects.create(
@@ -363,9 +468,17 @@ choices16 = [
     {"text": "Loughtown", "label": "C", "is_correct": False},
     {"text": "Kilbelin", "label": "D", "is_correct": False},
 ]
-for choice_data in choices16:
-    Choice.objects.create(question=question16, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question16.save()
+for choice in choices16:
+    try:
+        Choice.objects.create(
+            question=question16,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q16] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 17 ===
 question17 = Question.objects.create(
@@ -385,9 +498,17 @@ choices17 = [
     {"text": "Station Road", "label": "C", "is_correct": False},
     {"text": "Athgarvan Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices17:
-    Choice.objects.create(question=question17, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question17.save()
+for choice in choices17:
+    try:
+        Choice.objects.create(
+            question=question17,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q17] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 18 ===
 question18 = Question.objects.create(
@@ -407,9 +528,17 @@ choices18 = [
     {"text": "Kildare Town", "label": "C", "is_correct": False},
     {"text": "Newbridge", "label": "D", "is_correct": False},
 ]
-for choice_data in choices18:
-    Choice.objects.create(question=question18, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question18.save()
+for choice in choices18:
+    try:
+        Choice.objects.create(
+            question=question18,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q18] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 19 ===
 question19 = Question.objects.create(
@@ -429,9 +558,17 @@ choices19 = [
     {"text": "Ballyvoneen", "label": "C", "is_correct": False},
     {"text": "Brallistown Little (Tully)", "label": "D", "is_correct": True},
 ]
-for choice_data in choices19:
-    Choice.objects.create(question=question19, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question19.save()
+for choice in choices19:
+    try:
+        Choice.objects.create(
+            question=question19,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q19] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 20 ===
 question20 = Question.objects.create(
@@ -451,9 +588,17 @@ choices20 = [
     {"text": "Athgarvan Road", "label": "C", "is_correct": False},
     {"text": "Charlotte Street", "label": "D", "is_correct": False},
 ]
-for choice_data in choices20:
-    Choice.objects.create(question=question20, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question20.save()
+for choice in choices20:
+    try:
+        Choice.objects.create(
+            question=question20,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q20] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 21 ===
 question21 = Question.objects.create(
@@ -473,9 +618,17 @@ choices21 = [
     {"text": "Sallins", "label": "C", "is_correct": False},
     {"text": "Clane", "label": "D", "is_correct": True},
 ]
-for choice_data in choices21:
-    Choice.objects.create(question=question21, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question21.save()
+for choice in choices21:
+    try:
+        Choice.objects.create(
+            question=question21,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q21] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 22 ===
 question22 = Question.objects.create(
@@ -495,9 +648,17 @@ choices22 = [
     {"text": "Dunboyne Road", "label": "C", "is_correct": False},
     {"text": "Main Street", "label": "D", "is_correct": True},
 ]
-for choice_data in choices22:
-    Choice.objects.create(question=question22, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question22.save()
+for choice in choices22:
+    try:
+        Choice.objects.create(
+            question=question22,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q22] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 23 ===
 question23 = Question.objects.create(
@@ -517,9 +678,17 @@ choices23 = [
     {"text": "Geraldine Road", "label": "C", "is_correct": False},
     {"text": "Dublin Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices23:
-    Choice.objects.create(question=question23, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question23.save()
+for choice in choices23:
+    try:
+        Choice.objects.create(
+            question=question23,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q23] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 24 ===
 question24 = Question.objects.create(
@@ -539,9 +708,17 @@ choices24 = [
     {"text": "Rowan Terrace & The Grange", "label": "C", "is_correct": False},
     {"text": "College Park Road & Station Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices24:
-    Choice.objects.create(question=question24, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question24.save()
+for choice in choices24:
+    try:
+        Choice.objects.create(
+            question=question24,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q24] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 25 ===
 question25 = Question.objects.create(
@@ -561,9 +738,17 @@ choices25 = [
     {"text": "Patrick Street", "label": "C", "is_correct": False},
     {"text": "Francis Street", "label": "D", "is_correct": False},
 ]
-for choice_data in choices25:
-    Choice.objects.create(question=question25, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question25.save()
+for choice in choices25:
+    try:
+        Choice.objects.create(
+            question=question25,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q25] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 26 ===
 question26 = Question.objects.create(
@@ -583,9 +768,17 @@ choices26 = [
     {"text": "R445", "label": "C", "is_correct": False},
     {"text": "R409", "label": "D", "is_correct": False},
 ]
-for choice_data in choices26:
-    Choice.objects.create(question=question26, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question26.save()
+for choice in choices26:
+    try:
+        Choice.objects.create(
+            question=question26,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q26] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 27 ===
 question27 = Question.objects.create(
@@ -605,9 +798,17 @@ choices27 = [
     {"text": "Bleach Road", "label": "C", "is_correct": False},
     {"text": "Carlow Road", "label": "D", "is_correct": True},
 ]
-for choice_data in choices27:
-    Choice.objects.create(question=question27, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question27.save()
+for choice in choices27:
+    try:
+        Choice.objects.create(
+            question=question27,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q27] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 28 ===
 question28 = Question.objects.create(
@@ -627,9 +828,17 @@ choices28 = [
     {"text": "Stanhope Street", "label": "C", "is_correct": False},
     {"text": "Convent Lane", "label": "D", "is_correct": False},
 ]
-for choice_data in choices28:
-    Choice.objects.create(question=question28, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question28.save()
+for choice in choices28:
+    try:
+        Choice.objects.create(
+            question=question28,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q28] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 29 ===
 question29 = Question.objects.create(
@@ -649,9 +858,17 @@ choices29 = [
     {"text": "Castletown Drive", "label": "C", "is_correct": False},
     {"text": "Shackleton Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices29:
-    Choice.objects.create(question=question29, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question29.save()
+for choice in choices29:
+    try:
+        Choice.objects.create(
+            question=question29,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q29] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 30 ===
 question30 = Question.objects.create(
@@ -671,9 +888,17 @@ choices30 = [
     {"text": "Glendale", "label": "C", "is_correct": False},
     {"text": "Avondale", "label": "D", "is_correct": False},
 ]
-for choice_data in choices30:
-    Choice.objects.create(question=question30, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question30.save()
+for choice in choices30:
+    try:
+        Choice.objects.create(
+            question=question30,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q30] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 31 ===
 question31 = Question.objects.create(
@@ -693,9 +918,17 @@ choices31 = [
     {"text": "Straffan Road", "label": "C", "is_correct": False},
     {"text": "Parson Street", "label": "D", "is_correct": True},
 ]
-for choice_data in choices31:
-    Choice.objects.create(question=question31, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question31.save()
+for choice in choices31:
+    try:
+        Choice.objects.create(
+            question=question31,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q31] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 32 ===
 question32 = Question.objects.create(
@@ -715,9 +948,17 @@ choices32 = [
     {"text": "Straffan Road", "label": "C", "is_correct": True},
     {"text": "Newtown Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices32:
-    Choice.objects.create(question=question32, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question32.save()
+for choice in choices32:
+    try:
+        Choice.objects.create(
+            question=question32,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q32] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 33 ===
 question33 = Question.objects.create(
@@ -737,9 +978,17 @@ choices33 = [
     {"text": "Kilcock Road", "label": "C", "is_correct": False},
     {"text": "Moyglare Road", "label": "D", "is_correct": True},
 ]
-for choice_data in choices33:
-    Choice.objects.create(question=question33, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question33.save()
+for choice in choices33:
+    try:
+        Choice.objects.create(
+            question=question33,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q33] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 34 ===
 question34 = Question.objects.create(
@@ -759,9 +1008,17 @@ choices34 = [
     {"text": "Moyglare Road", "label": "C", "is_correct": False},
     {"text": "Dunboyne Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices34:
-    Choice.objects.create(question=question34, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question34.save()
+for choice in choices34:
+    try:
+        Choice.objects.create(
+            question=question34,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q34] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 35 ===
 question35 = Question.objects.create(
@@ -781,9 +1038,17 @@ choices35 = [
     {"text": "Oldtown Road", "label": "C", "is_correct": True},
     {"text": "Main Street", "label": "D", "is_correct": False},
 ]
-for choice_data in choices35:
-    Choice.objects.create(question=question35, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question35.save()
+for choice in choices35:
+    try:
+        Choice.objects.create(
+            question=question35,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q35] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 36 ===
 question36 = Question.objects.create(
@@ -803,9 +1068,17 @@ choices36 = [
     {"text": "Loughlinstown Road", "label": "C", "is_correct": False},
     {"text": "Hazelhatch Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices36:
-    Choice.objects.create(question=question36, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question36.save()
+for choice in choices36:
+    try:
+        Choice.objects.create(
+            question=question36,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q36] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 37 ===
 question37 = Question.objects.create(
@@ -825,9 +1098,17 @@ choices37 = [
     {"text": "Maynooth Road", "label": "C", "is_correct": False},
     {"text": "The Walk", "label": "D", "is_correct": True},
 ]
-for choice_data in choices37:
-    Choice.objects.create(question=question37, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question37.save()
+for choice in choices37:
+    try:
+        Choice.objects.create(
+            question=question37,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q37] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 38 ===
 question38 = Question.objects.create(
@@ -847,9 +1128,17 @@ choices38 = [
     {"text": "St Dominics Park", "label": "C", "is_correct": False},
     {"text": "Chapel Lane", "label": "D", "is_correct": True},
 ]
-for choice_data in choices38:
-    Choice.objects.create(question=question38, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question38.save()
+for choice in choices38:
+    try:
+        Choice.objects.create(
+            question=question38,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q38] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 39 ===
 question39 = Question.objects.create(
@@ -869,9 +1158,17 @@ choices39 = [
     {"text": "Dara Park", "label": "C", "is_correct": False},
     {"text": "The Elms", "label": "D", "is_correct": False},
 ]
-for choice_data in choices39:
-    Choice.objects.create(question=question39, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question39.save()
+for choice in choices39:
+    try:
+        Choice.objects.create(
+            question=question39,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q39] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 40 ===
 question40 = Question.objects.create(
@@ -891,9 +1188,17 @@ choices40 = [
     {"text": "Standhouse Road", "label": "C", "is_correct": True},
     {"text": "The Oaks", "label": "D", "is_correct": False},
 ]
-for choice_data in choices40:
-    Choice.objects.create(question=question40, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question40.save()
+for choice in choices40:
+    try:
+        Choice.objects.create(
+            question=question40,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q40] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 41 ===
 question41 = Question.objects.create(
@@ -913,9 +1218,17 @@ choices41 = [
     {"text": "Green Road", "label": "C", "is_correct": False},
     {"text": "Ballymany", "label": "D", "is_correct": False},
 ]
-for choice_data in choices41:
-    Choice.objects.create(question=question41, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question41.save()
+for choice in choices41:
+    try:
+        Choice.objects.create(
+            question=question41,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q41] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 42 ===
 question42 = Question.objects.create(
@@ -935,9 +1248,17 @@ choices42 = [
     {"text": "College Park Road", "label": "C", "is_correct": True},
     {"text": "Rosconnell Avenue", "label": "D", "is_correct": False},
 ]
-for choice_data in choices42:
-    Choice.objects.create(question=question42, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question42.save()
+for choice in choices42:
+    try:
+        Choice.objects.create(
+            question=question42,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q42] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 43 ===
 question43 = Question.objects.create(
@@ -957,9 +1278,17 @@ choices43 = [
     {"text": "Monread Road", "label": "C", "is_correct": False},
     {"text": "Sallins Road", "label": "D", "is_correct": True},
 ]
-for choice_data in choices43:
-    Choice.objects.create(question=question43, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question43.save()
+for choice in choices43:
+    try:
+        Choice.objects.create(
+            question=question43,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q43] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 44 ===
 question44 = Question.objects.create(
@@ -979,9 +1308,17 @@ choices44 = [
     {"text": "Dublin Road", "label": "C", "is_correct": False},
     {"text": "Tipper Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices44:
-    Choice.objects.create(question=question44, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question44.save()
+for choice in choices44:
+    try:
+        Choice.objects.create(
+            question=question44,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q44] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 45 ===
 question45 = Question.objects.create(
@@ -1001,9 +1338,17 @@ choices45 = [
     {"text": "Pacelli Road", "label": "C", "is_correct": False},
     {"text": "Corban's Lane", "label": "D", "is_correct": True},
 ]
-for choice_data in choices45:
-    Choice.objects.create(question=question45, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question45.save()
+for choice in choices45:
+    try:
+        Choice.objects.create(
+            question=question45,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q45] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 46 ===
 question46 = Question.objects.create(
@@ -1023,9 +1368,17 @@ choices46 = [
     {"text": "Rathbride Road", "label": "C", "is_correct": False},
     {"text": "Green Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices46:
-    Choice.objects.create(question=question46, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question46.save()
+for choice in choices46:
+    try:
+        Choice.objects.create(
+            question=question46,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q46] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 47 ===
 question47 = Question.objects.create(
@@ -1045,9 +1398,17 @@ choices47 = [
     {"text": "Chapel Road", "label": "C", "is_correct": False},
     {"text": "Melitta Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices47:
-    Choice.objects.create(question=question47, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question47.save()
+for choice in choices47:
+    try:
+        Choice.objects.create(
+            question=question47,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q47] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 48 ===
 question48 = Question.objects.create(
@@ -1067,9 +1428,17 @@ choices48 = [
     {"text": "Pigeon Lane", "label": "C", "is_correct": False},
     {"text": "Priests Lane", "label": "D", "is_correct": False},
 ]
-for choice_data in choices48:
-    Choice.objects.create(question=question48, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question48.save()
+for choice in choices48:
+    try:
+        Choice.objects.create(
+            question=question48,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q48] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 49 ===
 question49 = Question.objects.create(
@@ -1089,9 +1458,17 @@ choices49 = [
     {"text": "Melitta Road", "label": "C", "is_correct": False},
     {"text": "Rathbride Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices49:
-    Choice.objects.create(question=question49, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question49.save()
+for choice in choices49:
+    try:
+        Choice.objects.create(
+            question=question49,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q49] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 50 ===
 question50 = Question.objects.create(
@@ -1111,9 +1488,17 @@ choices50 = [
     {"text": "Fair Green Road", "label": "C", "is_correct": True},
     {"text": "Priest's Lane", "label": "D", "is_correct": False},
 ]
-for choice_data in choices50:
-    Choice.objects.create(question=question50, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question50.save()
+for choice in choices50:
+    try:
+        Choice.objects.create(
+            question=question50,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q50] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 51 ===
 question51 = Question.objects.create(
@@ -1133,9 +1518,17 @@ choices51 = [
     {"text": "Conneyboro", "label": "C", "is_correct": False},
     {"text": "Old Lawm", "label": "D", "is_correct": False},
 ]
-for choice_data in choices51:
-    Choice.objects.create(question=question51, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question51.save()
+for choice in choices51:
+    try:
+        Choice.objects.create(
+            question=question51,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q51] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 52 ===
 question52 = Question.objects.create(
@@ -1155,9 +1548,17 @@ choices52 = [
     {"text": "Earls Court", "label": "C", "is_correct": False},
     {"text": "Salisbury", "label": "D", "is_correct": False},
 ]
-for choice_data in choices52:
-    Choice.objects.create(question=question52, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question52.save()
+for choice in choices52:
+    try:
+        Choice.objects.create(
+            question=question52,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q52] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 53 ===
 question53 = Question.objects.create(
@@ -1177,9 +1578,17 @@ choices53 = [
     {"text": "Woodstock Street", "label": "C", "is_correct": False},
     {"text": "Holland's Close", "label": "D", "is_correct": False},
 ]
-for choice_data in choices53:
-    Choice.objects.create(question=question53, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question53.save()
+for choice in choices53:
+    try:
+        Choice.objects.create(
+            question=question53,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q53] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 54 ===
 question54 = Question.objects.create(
@@ -1199,9 +1608,17 @@ choices54 = [
     {"text": "The Hollands", "label": "C", "is_correct": False},
     {"text": "Castle Park", "label": "D", "is_correct": False},
 ]
-for choice_data in choices54:
-    Choice.objects.create(question=question54, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question54.save()
+for choice in choices54:
+    try:
+        Choice.objects.create(
+            question=question54,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q54] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 55 ===
 question55 = Question.objects.create(
@@ -1221,9 +1638,17 @@ choices55 = [
     {"text": "Convent View", "label": "C", "is_correct": False},
     {"text": "Stanhope Place", "label": "D", "is_correct": False},
 ]
-for choice_data in choices55:
-    Choice.objects.create(question=question55, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question55.save()
+for choice in choices55:
+    try:
+        Choice.objects.create(
+            question=question55,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q55] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 56 ===
 question56 = Question.objects.create(
@@ -1243,9 +1668,17 @@ choices56 = [
     {"text": "Edward Street", "label": "C", "is_correct": False},
     {"text": "Langton Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices56:
-    Choice.objects.create(question=question56, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question56.save()
+for choice in choices56:
+    try:
+        Choice.objects.create(
+            question=question56,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q56] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 57 ===
 question57 = Question.objects.create(
@@ -1265,9 +1698,17 @@ choices57 = [
     {"text": "Melitta Road", "label": "C", "is_correct": False},
     {"text": "Dublin Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices57:
-    Choice.objects.create(question=question57, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question57.save()
+for choice in choices57:
+    try:
+        Choice.objects.create(
+            question=question57,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q57] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 58 ===
 question58 = Question.objects.create(
@@ -1287,9 +1728,17 @@ choices58 = [
     {"text": "Dublin Road", "label": "C", "is_correct": False},
     {"text": "Elm Park", "label": "D", "is_correct": False},
 ]
-for choice_data in choices58:
-    Choice.objects.create(question=question58, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question58.save()
+for choice in choices58:
+    try:
+        Choice.objects.create(
+            question=question58,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q58] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 59 ===
 question59 = Question.objects.create(
@@ -1309,9 +1758,17 @@ choices59 = [
     {"text": "Dunboyne Road", "label": "C", "is_correct": False},
     {"text": "Straffan Road", "label": "D", "is_correct": True},
 ]
-for choice_data in choices59:
-    Choice.objects.create(question=question59, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question59.save()
+for choice in choices59:
+    try:
+        Choice.objects.create(
+            question=question59,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q59] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 60 ===
 question60 = Question.objects.create(
@@ -1331,9 +1788,17 @@ choices60 = [
     {"text": "Morristown Road", "label": "C", "is_correct": False},
     {"text": "Green Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices60:
-    Choice.objects.create(question=question60, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question60.save()
+for choice in choices60:
+    try:
+        Choice.objects.create(
+            question=question60,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q60] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 61 ===
 question61 = Question.objects.create(
@@ -1353,9 +1818,17 @@ choices61 = [
     {"text": "Main Street", "label": "C", "is_correct": False},
     {"text": "Shackleton Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices61:
-    Choice.objects.create(question=question61, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question61.save()
+for choice in choices61:
+    try:
+        Choice.objects.create(
+            question=question61,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q61] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 62 ===
 question62 = Question.objects.create(
@@ -1375,9 +1848,17 @@ choices62 = [
     {"text": "Ballyclane Road", "label": "C", "is_correct": False},
     {"text": "Sallins Road", "label": "D", "is_correct": True},
 ]
-for choice_data in choices62:
-    Choice.objects.create(question=question62, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question62.save()
+for choice in choices62:
+    try:
+        Choice.objects.create(
+            question=question62,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q62] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 63 ===
 question63 = Question.objects.create(
@@ -1397,9 +1878,17 @@ choices63 = [
     {"text": "Loughteague & Knockbawn", "label": "C", "is_correct": False},
     {"text": "Scrub & Foxburrow", "label": "D", "is_correct": False},
 ]
-for choice_data in choices63:
-    Choice.objects.create(question=question63, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question63.save()
+for choice in choices63:
+    try:
+        Choice.objects.create(
+            question=question63,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q63] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 64 ===
 question64 = Question.objects.create(
@@ -1419,9 +1908,17 @@ choices64 = [
     {"text": "Lackagh & Quinnsboro", "label": "C", "is_correct": False},
     {"text": "Kildangan & Kilberry", "label": "D", "is_correct": True},
 ]
-for choice_data in choices64:
-    Choice.objects.create(question=question64, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question64.save()
+for choice in choices64:
+    try:
+        Choice.objects.create(
+            question=question64,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q64] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 65 ===
 question65 = Question.objects.create(
@@ -1441,9 +1938,17 @@ choices65 = [
     {"text": "N80 & N79", "label": "C", "is_correct": False},
     {"text": "N77 & N10", "label": "D", "is_correct": False},
 ]
-for choice_data in choices65:
-    Choice.objects.create(question=question65, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question65.save()
+for choice in choices65:
+    try:
+        Choice.objects.create(
+            question=question65,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q65] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 66 ===
 question66 = Question.objects.create(
@@ -1463,9 +1968,17 @@ choices66 = [
     {"text": "N78 & N80", "label": "C", "is_correct": False},
     {"text": "N81 & N80", "label": "D", "is_correct": False},
 ]
-for choice_data in choices66:
-    Choice.objects.create(question=question66, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question66.save()
+for choice in choices66:
+    try:
+        Choice.objects.create(
+            question=question66,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q66] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 67 ===
 question67 = Question.objects.create(
@@ -1485,9 +1998,17 @@ choices67 = [
     {"text": "R15z", "label": "C", "is_correct": False},
     {"text": "R405", "label": "D", "is_correct": False},
 ]
-for choice_data in choices67:
-    Choice.objects.create(question=question67, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question67.save()
+for choice in choices67:
+    try:
+        Choice.objects.create(
+            question=question67,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q67] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 68 ===
 question68 = Question.objects.create(
@@ -1507,9 +2028,17 @@ choices68 = [
     {"text": "R10? & R149", "label": "C", "is_correct": False},
     {"text": "R449 & R148", "label": "D", "is_correct": True},
 ]
-for choice_data in choices68:
-    Choice.objects.create(question=question68, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question68.save()
+for choice in choices68:
+    try:
+        Choice.objects.create(
+            question=question68,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q68] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 69 ===
 question69 = Question.objects.create(
@@ -1529,9 +2058,17 @@ choices69 = [
     {"text": "R449", "label": "C", "is_correct": False},
     {"text": "R120", "label": "D", "is_correct": False},
 ]
-for choice_data in choices69:
-    Choice.objects.create(question=question69, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question69.save()
+for choice in choices69:
+    try:
+        Choice.objects.create(
+            question=question69,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q69] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 70 ===
 question70 = Question.objects.create(
@@ -1551,9 +2088,17 @@ choices70 = [
     {"text": "M9", "label": "C", "is_correct": False},
     {"text": "N81", "label": "D", "is_correct": False},
 ]
-for choice_data in choices70:
-    Choice.objects.create(question=question70, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question70.save()
+for choice in choices70:
+    try:
+        Choice.objects.create(
+            question=question70,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q70] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 71 ===
 question71 = Question.objects.create(
@@ -1573,9 +2118,17 @@ choices71 = [
     {"text": "M9", "label": "C", "is_correct": False},
     {"text": "M4", "label": "D", "is_correct": False},
 ]
-for choice_data in choices71:
-    Choice.objects.create(question=question71, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question71.save()
+for choice in choices71:
+    try:
+        Choice.objects.create(
+            question=question71,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q71] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 72 ===
 question72 = Question.objects.create(
@@ -1595,9 +2148,17 @@ choices72 = [
     {"text": "Newtown Road", "label": "C", "is_correct": False},
     {"text": "Dublin Road", "label": "D", "is_correct": True},
 ]
-for choice_data in choices72:
-    Choice.objects.create(question=question72, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question72.save()
+for choice in choices72:
+    try:
+        Choice.objects.create(
+            question=question72,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q72] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 73 ===
 question73 = Question.objects.create(
@@ -1617,9 +2178,17 @@ choices73 = [
     {"text": "Dublin Road", "label": "C", "is_correct": False},
     {"text": "Loughlinstown Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices73:
-    Choice.objects.create(question=question73, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question73.save()
+for choice in choices73:
+    try:
+        Choice.objects.create(
+            question=question73,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q73] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 74 ===
 question74 = Question.objects.create(
@@ -1639,9 +2208,17 @@ choices74 = [
     {"text": "Newtown Road", "label": "C", "is_correct": False},
     {"text": "Maynooth Road", "label": "D", "is_correct": True},
 ]
-for choice_data in choices74:
-    Choice.objects.create(question=question74, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question74.save()
+for choice in choices74:
+    try:
+        Choice.objects.create(
+            question=question74,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q74] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 75 ===
 question75 = Question.objects.create(
@@ -1661,9 +2238,17 @@ choices75 = [
     {"text": "Kilcock Road", "label": "C", "is_correct": False},
     {"text": "Newtown Road", "label": "D", "is_correct": True},
 ]
-for choice_data in choices75:
-    Choice.objects.create(question=question75, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question75.save()
+for choice in choices75:
+    try:
+        Choice.objects.create(
+            question=question75,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q75] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 76 ===
 question76 = Question.objects.create(
@@ -1683,9 +2268,17 @@ choices76 = [
     {"text": "Newtown Road", "label": "C", "is_correct": False},
     {"text": "Moyglare Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices76:
-    Choice.objects.create(question=question76, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question76.save()
+for choice in choices76:
+    try:
+        Choice.objects.create(
+            question=question76,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q76] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 77 ===
 question77 = Question.objects.create(
@@ -1705,9 +2298,17 @@ choices77 = [
     {"text": "Ballycane Road", "label": "C", "is_correct": False},
     {"text": "Blessington Road", "label": "D", "is_correct": True},
 ]
-for choice_data in choices77:
-    Choice.objects.create(question=question77, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question77.save()
+for choice in choices77:
+    try:
+        Choice.objects.create(
+            question=question77,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q77] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 78 ===
 question78 = Question.objects.create(
@@ -1727,9 +2328,17 @@ choices78 = [
     {"text": "Monread Road", "label": "C", "is_correct": False},
     {"text": "Newbridge Road", "label": "D", "is_correct": True},
 ]
-for choice_data in choices78:
-    Choice.objects.create(question=question78, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question78.save()
+for choice in choices78:
+    try:
+        Choice.objects.create(
+            question=question78,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q78] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 79 ===
 question79 = Question.objects.create(
@@ -1749,9 +2358,17 @@ choices79 = [
     {"text": "Ballycane Road", "label": "C", "is_correct": False},
     {"text": "Ballymore Road", "label": "D", "is_correct": True},
 ]
-for choice_data in choices79:
-    Choice.objects.create(question=question79, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question79.save()
+for choice in choices79:
+    try:
+        Choice.objects.create(
+            question=question79,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q79] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 80 ===
 question80 = Question.objects.create(
@@ -1771,9 +2388,17 @@ choices80 = [
     {"text": "Sallins Road", "label": "C", "is_correct": False},
     {"text": "New Caragh Road", "label": "D", "is_correct": True},
 ]
-for choice_data in choices80:
-    Choice.objects.create(question=question80, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question80.save()
+for choice in choices80:
+    try:
+        Choice.objects.create(
+            question=question80,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q80] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 81 ===
 question81 = Question.objects.create(
@@ -1793,9 +2418,17 @@ choices81 = [
     {"text": "New Caragh Rd", "label": "C", "is_correct": False},
     {"text": "Newbridge Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices81:
-    Choice.objects.create(question=question81, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question81.save()
+for choice in choices81:
+    try:
+        Choice.objects.create(
+            question=question81,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q81] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 82 ===
 question82 = Question.objects.create(
@@ -1815,9 +2448,17 @@ choices82 = [
     {"text": "Curragh Grange", "label": "C", "is_correct": False},
     {"text": "Athgarvan Rd", "label": "D", "is_correct": False},
 ]
-for choice_data in choices82:
-    Choice.objects.create(question=question82, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question82.save()
+for choice in choices82:
+    try:
+        Choice.objects.create(
+            question=question82,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q82] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 83 ===
 question83 = Question.objects.create(
@@ -1837,9 +2478,17 @@ choices83 = [
     {"text": "Standhouse Rd", "label": "C", "is_correct": True},
     {"text": "Artillery PI", "label": "D", "is_correct": False},
 ]
-for choice_data in choices83:
-    Choice.objects.create(question=question83, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question83.save()
+for choice in choices83:
+    try:
+        Choice.objects.create(
+            question=question83,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q83] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 84 ===
 question84 = Question.objects.create(
@@ -1859,9 +2508,17 @@ choices84 = [
     {"text": "Standhouse Road", "label": "C", "is_correct": True},
     {"text": "Langton Rd", "label": "D", "is_correct": False},
 ]
-for choice_data in choices84:
-    Choice.objects.create(question=question84, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question84.save()
+for choice in choices84:
+    try:
+        Choice.objects.create(
+            question=question84,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q84] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 85 ===
 question85 = Question.objects.create(
@@ -1881,9 +2538,17 @@ choices85 = [
     {"text": "Moorefield Dr", "label": "C", "is_correct": False},
     {"text": "Morristown Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices85:
-    Choice.objects.create(question=question85, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question85.save()
+for choice in choices85:
+    try:
+        Choice.objects.create(
+            question=question85,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q85] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 86 ===
 question86 = Question.objects.create(
@@ -1903,9 +2568,17 @@ choices86 = [
     {"text": "South Main Street", "label": "C", "is_correct": False},
     {"text": "Sallins Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices86:
-    Choice.objects.create(question=question86, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question86.save()
+for choice in choices86:
+    try:
+        Choice.objects.create(
+            question=question86,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q86] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 87 ===
 question87 = Question.objects.create(
@@ -1925,9 +2598,17 @@ choices87 = [
     {"text": "Church Road", "label": "C", "is_correct": False},
     {"text": "Tipper Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices87:
-    Choice.objects.create(question=question87, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question87.save()
+for choice in choices87:
+    try:
+        Choice.objects.create(
+            question=question87,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q87] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 88 ===
 question88 = Question.objects.create(
@@ -1947,9 +2628,17 @@ choices88 = [
     {"text": "Main Street", "label": "C", "is_correct": False},
     {"text": "Church Lane", "label": "D", "is_correct": False},
 ]
-for choice_data in choices88:
-    Choice.objects.create(question=question88, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question88.save()
+for choice in choices88:
+    try:
+        Choice.objects.create(
+            question=question88,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q88] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 89 ===
 question89 = Question.objects.create(
@@ -1969,9 +2658,17 @@ choices89 = [
     {"text": "Monread Crescent", "label": "C", "is_correct": False},
     {"text": "Monread Heights", "label": "D", "is_correct": False},
 ]
-for choice_data in choices89:
-    Choice.objects.create(question=question89, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question89.save()
+for choice in choices89:
+    try:
+        Choice.objects.create(
+            question=question89,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q89] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 90 ===
 question90 = Question.objects.create(
@@ -1991,9 +2688,17 @@ choices90 = [
     {"text": "Ballinagappa Road", "label": "C", "is_correct": False},
     {"text": "Main Street", "label": "D", "is_correct": True},
 ]
-for choice_data in choices90:
-    Choice.objects.create(question=question90, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question90.save()
+for choice in choices90:
+    try:
+        Choice.objects.create(
+            question=question90,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q90] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 91 ===
 question91 = Question.objects.create(
@@ -2013,9 +2718,17 @@ choices91 = [
     {"text": "Sallins Road", "label": "C", "is_correct": True},
     {"text": "John's Lane", "label": "D", "is_correct": False},
 ]
-for choice_data in choices91:
-    Choice.objects.create(question=question91, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question91.save()
+for choice in choices91:
+    try:
+        Choice.objects.create(
+            question=question91,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q91] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 92 ===
 question92 = Question.objects.create(
@@ -2035,9 +2748,17 @@ choices92 = [
     {"text": "Main Street", "label": "C", "is_correct": True},
     {"text": "Blessington Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices92:
-    Choice.objects.create(question=question92, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question92.save()
+for choice in choices92:
+    try:
+        Choice.objects.create(
+            question=question92,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q92] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 93 ===
 question93 = Question.objects.create(
@@ -2057,9 +2778,17 @@ choices93 = [
     {"text": "Craddockstown Road", "label": "C", "is_correct": False},
     {"text": "Millbridge Way", "label": "D", "is_correct": True},
 ]
-for choice_data in choices93:
-    Choice.objects.create(question=question93, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question93.save()
+for choice in choices93:
+    try:
+        Choice.objects.create(
+            question=question93,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q93] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 94 ===
 question94 = Question.objects.create(
@@ -2079,9 +2808,17 @@ choices94 = [
     {"text": "Tipper Road", "label": "C", "is_correct": False},
     {"text": "Dublin Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices94:
-    Choice.objects.create(question=question94, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question94.save()
+for choice in choices94:
+    try:
+        Choice.objects.create(
+            question=question94,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q94] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 95 ===
 question95 = Question.objects.create(
@@ -2101,9 +2838,17 @@ choices95 = [
     {"text": "Main Street", "label": "C", "is_correct": False},
     {"text": "Harbour View", "label": "D", "is_correct": False},
 ]
-for choice_data in choices95:
-    Choice.objects.create(question=question95, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question95.save()
+for choice in choices95:
+    try:
+        Choice.objects.create(
+            question=question95,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q95] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 96 ===
 question96 = Question.objects.create(
@@ -2123,9 +2868,17 @@ choices96 = [
     {"text": "Ballycane Road", "label": "C", "is_correct": False},
     {"text": "Sallins Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices96:
-    Choice.objects.create(question=question96, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question96.save()
+for choice in choices96:
+    try:
+        Choice.objects.create(
+            question=question96,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q96] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 97 ===
 question97 = Question.objects.create(
@@ -2145,9 +2898,17 @@ choices97 = [
     {"text": "South Main Street", "label": "C", "is_correct": True},
     {"text": "Tipper Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices97:
-    Choice.objects.create(question=question97, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question97.save()
+for choice in choices97:
+    try:
+        Choice.objects.create(
+            question=question97,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q97] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 98 ===
 question98 = Question.objects.create(
@@ -2167,9 +2928,17 @@ choices98 = [
     {"text": "Friary Road", "label": "C", "is_correct": True},
     {"text": "Sarto Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices98:
-    Choice.objects.create(question=question98, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question98.save()
+for choice in choices98:
+    try:
+        Choice.objects.create(
+            question=question98,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q98] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 99 ===
 question99 = Question.objects.create(
@@ -2189,9 +2958,17 @@ choices99 = [
     {"text": "Ballymore Road", "label": "C", "is_correct": False},
     {"text": "John Devoy Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices99:
-    Choice.objects.create(question=question99, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question99.save()
+for choice in choices99:
+    try:
+        Choice.objects.create(
+            question=question99,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q99] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 100 ===
 question100 = Question.objects.create(
@@ -2211,9 +2988,17 @@ choices100 = [
     {"text": "Main Street", "label": "C", "is_correct": True},
     {"text": "Station Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices100:
-    Choice.objects.create(question=question100, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question100.save()
+for choice in choices100:
+    try:
+        Choice.objects.create(
+            question=question100,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q100] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 101 ===
 question101 = Question.objects.create(
@@ -2233,9 +3018,17 @@ choices101 = [
     {"text": "Captain's Hill", "label": "C", "is_correct": False},
     {"text": "Station Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices101:
-    Choice.objects.create(question=question101, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question101.save()
+for choice in choices101:
+    try:
+        Choice.objects.create(
+            question=question101,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q101] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 102 ===
 question102 = Question.objects.create(
@@ -2255,9 +3048,17 @@ choices102 = [
     {"text": "Main Street", "label": "C", "is_correct": True},
     {"text": "The Grange", "label": "D", "is_correct": False},
 ]
-for choice_data in choices102:
-    Choice.objects.create(question=question102, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question102.save()
+for choice in choices102:
+    try:
+        Choice.objects.create(
+            question=question102,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q102] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 103 ===
 question103 = Question.objects.create(
@@ -2277,9 +3078,17 @@ choices103 = [
     {"text": "Rowan Terrace", "label": "C", "is_correct": False},
     {"text": "Main Street", "label": "D", "is_correct": False},
 ]
-for choice_data in choices103:
-    Choice.objects.create(question=question103, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question103.save()
+for choice in choices103:
+    try:
+        Choice.objects.create(
+            question=question103,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q103] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 104 ===
 question104 = Question.objects.create(
@@ -2299,9 +3108,17 @@ choices104 = [
     {"text": "Limerick Lane", "label": "C", "is_correct": True},
     {"text": "College Park Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices104:
-    Choice.objects.create(question=question104, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question104.save()
+for choice in choices104:
+    try:
+        Choice.objects.create(
+            question=question104,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q104] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 105 ===
 question105 = Question.objects.create(
@@ -2321,9 +3138,17 @@ choices105 = [
     {"text": "Dawson Street", "label": "C", "is_correct": False},
     {"text": "Edward Street", "label": "D", "is_correct": True},
 ]
-for choice_data in choices105:
-    Choice.objects.create(question=question105, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question105.save()
+for choice in choices105:
+    try:
+        Choice.objects.create(
+            question=question105,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q105] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 106 ===
 question106 = Question.objects.create(
@@ -2343,9 +3168,17 @@ choices106 = [
     {"text": "Moorefield Road", "label": "C", "is_correct": False},
     {"text": "Edward Street", "label": "D", "is_correct": True},
 ]
-for choice_data in choices106:
-    Choice.objects.create(question=question106, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question106.save()
+for choice in choices106:
+    try:
+        Choice.objects.create(
+            question=question106,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q106] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 107 ===
 question107 = Question.objects.create(
@@ -2365,9 +3198,17 @@ choices107 = [
     {"text": "Main Street", "label": "C", "is_correct": True},
     {"text": "Parson Street", "label": "D", "is_correct": False},
 ]
-for choice_data in choices107:
-    Choice.objects.create(question=question107, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question107.save()
+for choice in choices107:
+    try:
+        Choice.objects.create(
+            question=question107,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q107] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 108 ===
 question108 = Question.objects.create(
@@ -2387,9 +3228,17 @@ choices108 = [
     {"text": "Leinster Park", "label": "C", "is_correct": False},
     {"text": "Straffan Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices108:
-    Choice.objects.create(question=question108, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question108.save()
+for choice in choices108:
+    try:
+        Choice.objects.create(
+            question=question108,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q108] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 109 ===
 question109 = Question.objects.create(
@@ -2409,9 +3258,17 @@ choices109 = [
     {"text": "Main Street", "label": "C", "is_correct": True},
     {"text": "Lyreen Lodge", "label": "D", "is_correct": False},
 ]
-for choice_data in choices109:
-    Choice.objects.create(question=question109, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question109.save()
+for choice in choices109:
+    try:
+        Choice.objects.create(
+            question=question109,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q109] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 110 ===
 question110 = Question.objects.create(
@@ -2431,9 +3288,17 @@ choices110 = [
     {"text": "Kilcock Road", "label": "C", "is_correct": False},
     {"text": "Pound Lane", "label": "D", "is_correct": False},
 ]
-for choice_data in choices110:
-    Choice.objects.create(question=question110, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question110.save()
+for choice in choices110:
+    try:
+        Choice.objects.create(
+            question=question110,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q110] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 111 ===
 question111 = Question.objects.create(
@@ -2453,9 +3318,17 @@ choices111 = [
     {"text": "Dunboyne Road", "label": "C", "is_correct": False},
     {"text": "Mill Street", "label": "D", "is_correct": False},
 ]
-for choice_data in choices111:
-    Choice.objects.create(question=question111, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question111.save()
+for choice in choices111:
+    try:
+        Choice.objects.create(
+            question=question111,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q111] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 112 ===
 question112 = Question.objects.create(
@@ -2475,9 +3348,17 @@ choices112 = [
     {"text": "Green Road", "label": "C", "is_correct": False},
     {"text": "Old Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices112:
-    Choice.objects.create(question=question112, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question112.save()
+for choice in choices112:
+    try:
+        Choice.objects.create(
+            question=question112,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q112] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 113 ===
 question113 = Question.objects.create(
@@ -2497,9 +3378,17 @@ choices113 = [
     {"text": "Market Square", "label": "C", "is_correct": True},
     {"text": "White Abbey Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices113:
-    Choice.objects.create(question=question113, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question113.save()
+for choice in choices113:
+    try:
+        Choice.objects.create(
+            question=question113,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q113] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 114 ===
 question114 = Question.objects.create(
@@ -2519,9 +3408,17 @@ choices114 = [
     {"text": "Rockfield Road", "label": "C", "is_correct": False},
     {"text": "Leinster Street", "label": "D", "is_correct": False},
 ]
-for choice_data in choices114:
-    Choice.objects.create(question=question114, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question114.save()
+for choice in choices114:
+    try:
+        Choice.objects.create(
+            question=question114,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q114] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 115 ===
 question115 = Question.objects.create(
@@ -2541,9 +3438,17 @@ choices115 = [
     {"text": "Leinster Street", "label": "C", "is_correct": True},
     {"text": "Mount Hawkins", "label": "D", "is_correct": False},
 ]
-for choice_data in choices115:
-    Choice.objects.create(question=question115, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question115.save()
+for choice in choices115:
+    try:
+        Choice.objects.create(
+            question=question115,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q115] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 116 ===
 question116 = Question.objects.create(
@@ -2563,9 +3468,17 @@ choices116 = [
     {"text": "Ballymore Road", "label": "C", "is_correct": False},
     {"text": "Corban's Lane", "label": "D", "is_correct": False},
 ]
-for choice_data in choices116:
-    Choice.objects.create(question=question116, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question116.save()
+for choice in choices116:
+    try:
+        Choice.objects.create(
+            question=question116,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q116] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 117 ===
 question117 = Question.objects.create(
@@ -2585,9 +3498,17 @@ choices117 = [
     {"text": "Mill Lane", "label": "C", "is_correct": False},
     {"text": "Castle Park", "label": "D", "is_correct": False},
 ]
-for choice_data in choices117:
-    Choice.objects.create(question=question117, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question117.save()
+for choice in choices117:
+    try:
+        Choice.objects.create(
+            question=question117,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q117] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 118 ===
 question118 = Question.objects.create(
@@ -2607,9 +3528,17 @@ choices118 = [
     {"text": "Rye River Mall", "label": "C", "is_correct": False},
     {"text": "Old Hill", "label": "D", "is_correct": False},
 ]
-for choice_data in choices118:
-    Choice.objects.create(question=question118, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question118.save()
+for choice in choices118:
+    try:
+        Choice.objects.create(
+            question=question118,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q118] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 119 ===
 question119 = Question.objects.create(
@@ -2629,9 +3558,17 @@ choices119 = [
     {"text": "Ryston Avenue", "label": "C", "is_correct": False},
     {"text": "Athgarvan Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices119:
-    Choice.objects.create(question=question119, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question119.save()
+for choice in choices119:
+    try:
+        Choice.objects.create(
+            question=question119,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q119] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 120 ===
 question120 = Question.objects.create(
@@ -2651,9 +3588,17 @@ choices120 = [
     {"text": "Main Street", "label": "C", "is_correct": False},
     {"text": "Edward Street", "label": "D", "is_correct": False},
 ]
-for choice_data in choices120:
-    Choice.objects.create(question=question120, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question120.save()
+for choice in choices120:
+    try:
+        Choice.objects.create(
+            question=question120,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q120] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 121 ===
 question121 = Question.objects.create(
@@ -2673,9 +3618,17 @@ choices121 = [
     {"text": "Green Road", "label": "C", "is_correct": False},
     {"text": "Main Street", "label": "D", "is_correct": True},
 ]
-for choice_data in choices121:
-    Choice.objects.create(question=question121, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question121.save()
+for choice in choices121:
+    try:
+        Choice.objects.create(
+            question=question121,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q121] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 122 ===
 question122 = Question.objects.create(
@@ -2695,9 +3648,17 @@ choices122 = [
     {"text": "Main Street", "label": "C", "is_correct": True},
     {"text": "Eyre Street", "label": "D", "is_correct": False},
 ]
-for choice_data in choices122:
-    Choice.objects.create(question=question122, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question122.save()
+for choice in choices122:
+    try:
+        Choice.objects.create(
+            question=question122,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q122] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 123 ===
 question123 = Question.objects.create(
@@ -2717,9 +3678,17 @@ choices123 = [
     {"text": "Edward Street", "label": "C", "is_correct": True},
     {"text": "Pairc Mhuire", "label": "D", "is_correct": False},
 ]
-for choice_data in choices123:
-    Choice.objects.create(question=question123, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question123.save()
+for choice in choices123:
+    try:
+        Choice.objects.create(
+            question=question123,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q123] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 124 ===
 question124 = Question.objects.create(
@@ -2739,9 +3708,17 @@ choices124 = [
     {"text": "Station Road", "label": "C", "is_correct": False},
     {"text": "Piercetown", "label": "D", "is_correct": False},
 ]
-for choice_data in choices124:
-    Choice.objects.create(question=question124, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question124.save()
+for choice in choices124:
+    try:
+        Choice.objects.create(
+            question=question124,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q124] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 125 ===
 question125 = Question.objects.create(
@@ -2761,9 +3738,17 @@ choices125 = [
     {"text": "Carton Square", "label": "C", "is_correct": False},
     {"text": "Main Street", "label": "D", "is_correct": True},
 ]
-for choice_data in choices125:
-    Choice.objects.create(question=question125, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question125.save()
+for choice in choices125:
+    try:
+        Choice.objects.create(
+            question=question125,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q125] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 126 ===
 question126 = Question.objects.create(
@@ -2783,9 +3768,17 @@ choices126 = [
     {"text": "Newtown Road", "label": "C", "is_correct": False},
     {"text": "Leinster Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices126:
-    Choice.objects.create(question=question126, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question126.save()
+for choice in choices126:
+    try:
+        Choice.objects.create(
+            question=question126,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q126] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 127 ===
 question127 = Question.objects.create(
@@ -2805,9 +3798,17 @@ choices127 = [
     {"text": "Main Street", "label": "C", "is_correct": True},
     {"text": "Moyglare Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices127:
-    Choice.objects.create(question=question127, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question127.save()
+for choice in choices127:
+    try:
+        Choice.objects.create(
+            question=question127,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q127] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 128 ===
 question128 = Question.objects.create(
@@ -2827,9 +3828,17 @@ choices128 = [
     {"text": "Kingsbry", "label": "C", "is_correct": False},
     {"text": "Straffan Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices128:
-    Choice.objects.create(question=question128, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question128.save()
+for choice in choices128:
+    try:
+        Choice.objects.create(
+            question=question128,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q128] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 129 ===
 question129 = Question.objects.create(
@@ -2849,9 +3858,17 @@ choices129 = [
     {"text": "Carton Grove", "label": "C", "is_correct": False},
     {"text": "Main Street", "label": "D", "is_correct": True},
 ]
-for choice_data in choices129:
-    Choice.objects.create(question=question129, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question129.save()
+for choice in choices129:
+    try:
+        Choice.objects.create(
+            question=question129,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q129] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 130 ===
 question130 = Question.objects.create(
@@ -2871,9 +3888,17 @@ choices130 = [
     {"text": "Monasterevin Road", "label": "C", "is_correct": False},
     {"text": "Dara Park", "label": "D", "is_correct": False},
 ]
-for choice_data in choices130:
-    Choice.objects.create(question=question130, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question130.save()
+for choice in choices130:
+    try:
+        Choice.objects.create(
+            question=question130,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q130] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 131 ===
 question131 = Question.objects.create(
@@ -2893,9 +3918,17 @@ choices131 = [
     {"text": "Cleamore Road", "label": "C", "is_correct": False},
     {"text": "Pigeon Lane", "label": "D", "is_correct": True},
 ]
-for choice_data in choices131:
-    Choice.objects.create(question=question131, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question131.save()
+for choice in choices131:
+    try:
+        Choice.objects.create(
+            question=question131,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q131] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 132 ===
 question132 = Question.objects.create(
@@ -2915,9 +3948,17 @@ choices132 = [
     {"text": "Green Road", "label": "C", "is_correct": False},
     {"text": "Claregate Street", "label": "D", "is_correct": True},
 ]
-for choice_data in choices132:
-    Choice.objects.create(question=question132, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question132.save()
+for choice in choices132:
+    try:
+        Choice.objects.create(
+            question=question132,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q132] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 133 ===
 question133 = Question.objects.create(
@@ -2937,9 +3978,17 @@ choices133 = [
     {"text": "Cleamore Road", "label": "C", "is_correct": False},
     {"text": "Market Square", "label": "D", "is_correct": True},
 ]
-for choice_data in choices133:
-    Choice.objects.create(question=question133, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question133.save()
+for choice in choices133:
+    try:
+        Choice.objects.create(
+            question=question133,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q133] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 134 ===
 question134 = Question.objects.create(
@@ -2959,9 +4008,17 @@ choices134 = [
     {"text": "Bride Street", "label": "C", "is_correct": False},
     {"text": "Heffernan's Lane", "label": "D", "is_correct": False},
 ]
-for choice_data in choices134:
-    Choice.objects.create(question=question134, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question134.save()
+for choice in choices134:
+    try:
+        Choice.objects.create(
+            question=question134,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q134] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 135 ===
 question135 = Question.objects.create(
@@ -2981,9 +4038,17 @@ choices135 = [
     {"text": "Leinster Street", "label": "C", "is_correct": False},
     {"text": "Woodstock Street", "label": "D", "is_correct": False},
 ]
-for choice_data in choices135:
-    Choice.objects.create(question=question135, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question135.save()
+for choice in choices135:
+    try:
+        Choice.objects.create(
+            question=question135,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q135] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 136 ===
 question136 = Question.objects.create(
@@ -3003,9 +4068,17 @@ choices136 = [
     {"text": "Ardrew Heights", "label": "C", "is_correct": False},
     {"text": "Bleach Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices136:
-    Choice.objects.create(question=question136, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question136.save()
+for choice in choices136:
+    try:
+        Choice.objects.create(
+            question=question136,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q136] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 137 ===
 question137 = Question.objects.create(
@@ -3025,9 +4098,17 @@ choices137 = [
     {"text": "Church Road", "label": "C", "is_correct": False},
     {"text": "Green Alley", "label": "D", "is_correct": False},
 ]
-for choice_data in choices137:
-    Choice.objects.create(question=question137, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question137.save()
+for choice in choices137:
+    try:
+        Choice.objects.create(
+            question=question137,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q137] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 138 ===
 question138 = Question.objects.create(
@@ -3047,9 +4128,17 @@ choices138 = [
     {"text": "Kingsgrove", "label": "C", "is_correct": False},
     {"text": "Stanhope Place", "label": "D", "is_correct": False},
 ]
-for choice_data in choices138:
-    Choice.objects.create(question=question138, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question138.save()
+for choice in choices138:
+    try:
+        Choice.objects.create(
+            question=question138,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q138] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 139 ===
 question139 = Question.objects.create(
@@ -3069,9 +4158,17 @@ choices139 = [
     {"text": "Leinster Street", "label": "C", "is_correct": False},
     {"text": "Geraldine Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices139:
-    Choice.objects.create(question=question139, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question139.save()
+for choice in choices139:
+    try:
+        Choice.objects.create(
+            question=question139,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q139] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 140 ===
 question140 = Question.objects.create(
@@ -3091,9 +4188,17 @@ choices140 = [
     {"text": "Rockfield Road", "label": "C", "is_correct": False},
     {"text": "Canal Side", "label": "D", "is_correct": False},
 ]
-for choice_data in choices140:
-    Choice.objects.create(question=question140, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question140.save()
+for choice in choices140:
+    try:
+        Choice.objects.create(
+            question=question140,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q140] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 141 ===
 question141 = Question.objects.create(
@@ -3113,9 +4218,17 @@ choices141 = [
     {"text": "Woodstock Street", "label": "C", "is_correct": False},
     {"text": "Bothai bui", "label": "D", "is_correct": False},
 ]
-for choice_data in choices141:
-    Choice.objects.create(question=question141, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question141.save()
+for choice in choices141:
+    try:
+        Choice.objects.create(
+            question=question141,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q141] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 142 ===
 question142 = Question.objects.create(
@@ -3135,9 +4248,17 @@ choices142 = [
     {"text": "Woodstock Street", "label": "C", "is_correct": True},
     {"text": "Mount Hawkins", "label": "D", "is_correct": False},
 ]
-for choice_data in choices142:
-    Choice.objects.create(question=question142, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question142.save()
+for choice in choices142:
+    try:
+        Choice.objects.create(
+            question=question142,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q142] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 143 ===
 question143 = Question.objects.create(
@@ -3157,9 +4278,17 @@ choices143 = [
     {"text": "Main Street", "label": "C", "is_correct": False},
     {"text": "Meeting Lane", "label": "D", "is_correct": False},
 ]
-for choice_data in choices143:
-    Choice.objects.create(question=question143, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question143.save()
+for choice in choices143:
+    try:
+        Choice.objects.create(
+            question=question143,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q143] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 144 ===
 question144 = Question.objects.create(
@@ -3179,9 +4308,17 @@ choices144 = [
     {"text": "Green Ln", "label": "C", "is_correct": False},
     {"text": "Main St", "label": "D", "is_correct": True},
 ]
-for choice_data in choices144:
-    Choice.objects.create(question=question144, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question144.save()
+for choice in choices144:
+    try:
+        Choice.objects.create(
+            question=question144,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q144] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 145 ===
 question145 = Question.objects.create(
@@ -3201,9 +4338,17 @@ choices145 = [
     {"text": "Straffan Rd", "label": "C", "is_correct": False},
     {"text": "Dunboyne Rd", "label": "D", "is_correct": False},
 ]
-for choice_data in choices145:
-    Choice.objects.create(question=question145, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question145.save()
+for choice in choices145:
+    try:
+        Choice.objects.create(
+            question=question145,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q145] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 146 ===
 question146 = Question.objects.create(
@@ -3223,9 +4368,17 @@ choices146 = [
     {"text": "L7055", "label": "C", "is_correct": False},
     {"text": "Dublin Rd", "label": "D", "is_correct": True},
 ]
-for choice_data in choices146:
-    Choice.objects.create(question=question146, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question146.save()
+for choice in choices146:
+    try:
+        Choice.objects.create(
+            question=question146,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q146] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 147 ===
 question147 = Question.objects.create(
@@ -3245,9 +4398,17 @@ choices147 = [
     {"text": "Rathasker Rd", "label": "C", "is_correct": False},
     {"text": "Kilcullen Rd", "label": "D", "is_correct": True},
 ]
-for choice_data in choices147:
-    Choice.objects.create(question=question147, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question147.save()
+for choice in choices147:
+    try:
+        Choice.objects.create(
+            question=question147,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q147] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 148 ===
 question148 = Question.objects.create(
@@ -3267,9 +4428,17 @@ choices148 = [
     {"text": "Main St", "label": "C", "is_correct": True},
     {"text": "Collge Park Rd", "label": "D", "is_correct": False},
 ]
-for choice_data in choices148:
-    Choice.objects.create(question=question148, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question148.save()
+for choice in choices148:
+    try:
+        Choice.objects.create(
+            question=question148,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q148] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 149 ===
 question149 = Question.objects.create(
@@ -3289,9 +4458,17 @@ choices149 = [
     {"text": "Rathangan Main St", "label": "C", "is_correct": True},
     {"text": "New St", "label": "D", "is_correct": False},
 ]
-for choice_data in choices149:
-    Choice.objects.create(question=question149, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question149.save()
+for choice in choices149:
+    try:
+        Choice.objects.create(
+            question=question149,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q149] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 150 ===
 question150 = Question.objects.create(
@@ -3311,9 +4488,17 @@ choices150 = [
     {"text": "Grove Ln", "label": "C", "is_correct": False},
     {"text": "Father Murphy Park", "label": "D", "is_correct": False},
 ]
-for choice_data in choices150:
-    Choice.objects.create(question=question150, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question150.save()
+for choice in choices150:
+    try:
+        Choice.objects.create(
+            question=question150,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q150] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 151 ===
 question151 = Question.objects.create(
@@ -3333,9 +4518,17 @@ choices151 = [
     {"text": "The Lord Rd", "label": "C", "is_correct": False},
     {"text": "Newtown Rd", "label": "D", "is_correct": True},
 ]
-for choice_data in choices151:
-    Choice.objects.create(question=question151, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question151.save()
+for choice in choices151:
+    try:
+        Choice.objects.create(
+            question=question151,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q151] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 152 ===
 question152 = Question.objects.create(
@@ -3355,9 +4548,17 @@ choices152 = [
     {"text": "Newtown Rd", "label": "C", "is_correct": False},
     {"text": "Tea Ln", "label": "D", "is_correct": False},
 ]
-for choice_data in choices152:
-    Choice.objects.create(question=question152, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question152.save()
+for choice in choices152:
+    try:
+        Choice.objects.create(
+            question=question152,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q152] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 153 ===
 question153 = Question.objects.create(
@@ -3377,9 +4578,17 @@ choices153 = [
     {"text": "Buckley's Lane", "label": "C", "is_correct": False},
     {"text": "Old Hill", "label": "D", "is_correct": False},
 ]
-for choice_data in choices153:
-    Choice.objects.create(question=question153, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question153.save()
+for choice in choices153:
+    try:
+        Choice.objects.create(
+            question=question153,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q153] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 154 ===
 question154 = Question.objects.create(
@@ -3399,9 +4608,17 @@ choices154 = [
     {"text": "Station Rd", "label": "C", "is_correct": True},
     {"text": "Captains Hill", "label": "D", "is_correct": False},
 ]
-for choice_data in choices154:
-    Choice.objects.create(question=question154, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question154.save()
+for choice in choices154:
+    try:
+        Choice.objects.create(
+            question=question154,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q154] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 155 ===
 question155 = Question.objects.create(
@@ -3421,9 +4638,17 @@ choices155 = [
     {"text": "Celbridge Rd", "label": "C", "is_correct": False},
     {"text": "Station Road", "label": "D", "is_correct": True},
 ]
-for choice_data in choices155:
-    Choice.objects.create(question=question155, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question155.save()
+for choice in choices155:
+    try:
+        Choice.objects.create(
+            question=question155,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q155] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 156 ===
 question156 = Question.objects.create(
@@ -3443,9 +4668,17 @@ choices156 = [
     {"text": "Main St", "label": "C", "is_correct": False},
     {"text": "Green Lane", "label": "D", "is_correct": False},
 ]
-for choice_data in choices156:
-    Choice.objects.create(question=question156, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question156.save()
+for choice in choices156:
+    try:
+        Choice.objects.create(
+            question=question156,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q156] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 157 ===
 question157 = Question.objects.create(
@@ -3465,9 +4698,17 @@ choices157 = [
     {"text": "Molyglare Rd", "label": "C", "is_correct": False},
     {"text": "Doctors Ln", "label": "D", "is_correct": False},
 ]
-for choice_data in choices157:
-    Choice.objects.create(question=question157, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question157.save()
+for choice in choices157:
+    try:
+        Choice.objects.create(
+            question=question157,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q157] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 158 ===
 question158 = Question.objects.create(
@@ -3487,9 +4728,17 @@ choices158 = [
     {"text": "Lienster Cottage", "label": "C", "is_correct": False},
     {"text": "Laurence Ave", "label": "D", "is_correct": False},
 ]
-for choice_data in choices158:
-    Choice.objects.create(question=question158, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question158.save()
+for choice in choices158:
+    try:
+        Choice.objects.create(
+            question=question158,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q158] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 159 ===
 question159 = Question.objects.create(
@@ -3509,9 +4758,17 @@ choices159 = [
     {"text": "Rathasker Rd", "label": "C", "is_correct": False},
     {"text": "Devoy Park", "label": "D", "is_correct": True},
 ]
-for choice_data in choices159:
-    Choice.objects.create(question=question159, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question159.save()
+for choice in choices159:
+    try:
+        Choice.objects.create(
+            question=question159,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q159] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 160 ===
 question160 = Question.objects.create(
@@ -3531,9 +4788,17 @@ choices160 = [
     {"text": "Main St Naas", "label": "C", "is_correct": True},
     {"text": "Corban's Ln", "label": "D", "is_correct": False},
 ]
-for choice_data in choices160:
-    Choice.objects.create(question=question160, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question160.save()
+for choice in choices160:
+    try:
+        Choice.objects.create(
+            question=question160,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q160] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 161 ===
 question161 = Question.objects.create(
@@ -3553,9 +4818,17 @@ choices161 = [
     {"text": "Corban's Ln", "label": "C", "is_correct": False},
     {"text": "Friary Rd", "label": "D", "is_correct": False},
 ]
-for choice_data in choices161:
-    Choice.objects.create(question=question161, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question161.save()
+for choice in choices161:
+    try:
+        Choice.objects.create(
+            question=question161,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q161] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 162 ===
 question162 = Question.objects.create(
@@ -3575,9 +4848,17 @@ choices162 = [
     {"text": "Main St Naas", "label": "C", "is_correct": False},
     {"text": "Rathasker Rd", "label": "D", "is_correct": False},
 ]
-for choice_data in choices162:
-    Choice.objects.create(question=question162, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question162.save()
+for choice in choices162:
+    try:
+        Choice.objects.create(
+            question=question162,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q162] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 163 ===
 question163 = Question.objects.create(
@@ -3597,9 +4878,17 @@ choices163 = [
     {"text": "Main St Newbridge", "label": "C", "is_correct": True},
     {"text": "Liffey View", "label": "D", "is_correct": False},
 ]
-for choice_data in choices163:
-    Choice.objects.create(question=question163, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question163.save()
+for choice in choices163:
+    try:
+        Choice.objects.create(
+            question=question163,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q163] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 164 ===
 question164 = Question.objects.create(
@@ -3619,9 +4908,17 @@ choices164 = [
     {"text": "Eyre St", "label": "C", "is_correct": False},
     {"text": "Station Rd", "label": "D", "is_correct": True},
 ]
-for choice_data in choices164:
-    Choice.objects.create(question=question164, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question164.save()
+for choice in choices164:
+    try:
+        Choice.objects.create(
+            question=question164,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q164] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 165 ===
 question165 = Question.objects.create(
@@ -3641,9 +4938,17 @@ choices165 = [
     {"text": "James St", "label": "C", "is_correct": False},
     {"text": "College Park Rd", "label": "D", "is_correct": False},
 ]
-for choice_data in choices165:
-    Choice.objects.create(question=question165, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question165.save()
+for choice in choices165:
+    try:
+        Choice.objects.create(
+            question=question165,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q165] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 166 ===
 question166 = Question.objects.create(
@@ -3663,9 +4968,17 @@ choices166 = [
     {"text": "Claregate St", "label": "C", "is_correct": False},
     {"text": "Pigeon Ln", "label": "D", "is_correct": False},
 ]
-for choice_data in choices166:
-    Choice.objects.create(question=question166, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question166.save()
+for choice in choices166:
+    try:
+        Choice.objects.create(
+            question=question166,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q166] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 167 ===
 question167 = Question.objects.create(
@@ -3685,9 +4998,17 @@ choices167 = [
     {"text": "Fair Green Rd", "label": "C", "is_correct": False},
     {"text": "Curragh Finn", "label": "D", "is_correct": False},
 ]
-for choice_data in choices167:
-    Choice.objects.create(question=question167, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question167.save()
+for choice in choices167:
+    try:
+        Choice.objects.create(
+            question=question167,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q167] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 168 ===
 question168 = Question.objects.create(
@@ -3707,9 +5028,17 @@ choices168 = [
     {"text": "Convent Ln", "label": "C", "is_correct": False},
     {"text": "Stanhope PI", "label": "D", "is_correct": False},
 ]
-for choice_data in choices168:
-    Choice.objects.create(question=question168, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question168.save()
+for choice in choices168:
+    try:
+        Choice.objects.create(
+            question=question168,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q168] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 169 ===
 question169 = Question.objects.create(
@@ -3729,9 +5058,17 @@ choices169 = [
     {"text": "Convent View", "label": "C", "is_correct": False},
     {"text": "Mansfield Grove", "label": "D", "is_correct": False},
 ]
-for choice_data in choices169:
-    Choice.objects.create(question=question169, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question169.save()
+for choice in choices169:
+    try:
+        Choice.objects.create(
+            question=question169,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q169] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 170 ===
 question170 = Question.objects.create(
@@ -3751,9 +5088,17 @@ choices170 = [
     {"text": "Stanhope St", "label": "C", "is_correct": False},
     {"text": "Stanhope PI", "label": "D", "is_correct": False},
 ]
-for choice_data in choices170:
-    Choice.objects.create(question=question170, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question170.save()
+for choice in choices170:
+    try:
+        Choice.objects.create(
+            question=question170,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q170] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 171 ===
 question171 = Question.objects.create(
@@ -3773,9 +5118,17 @@ choices171 = [
     {"text": "Meeting Ln", "label": "C", "is_correct": False},
     {"text": "Barrow Quay", "label": "D", "is_correct": False},
 ]
-for choice_data in choices171:
-    Choice.objects.create(question=question171, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question171.save()
+for choice in choices171:
+    try:
+        Choice.objects.create(
+            question=question171,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q171] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 172 ===
 question172 = Question.objects.create(
@@ -3795,9 +5148,17 @@ choices172 = [
     {"text": "Kilcullen Slope", "label": "C", "is_correct": False},
     {"text": "New Abbey Rd", "label": "D", "is_correct": False},
 ]
-for choice_data in choices172:
-    Choice.objects.create(question=question172, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question172.save()
+for choice in choices172:
+    try:
+        Choice.objects.create(
+            question=question172,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q172] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 173 ===
 question173 = Question.objects.create(
@@ -3817,9 +5178,17 @@ choices173 = [
     {"text": "Poplar Sq", "label": "C", "is_correct": True},
     {"text": "Kildare Square", "label": "D", "is_correct": False},
 ]
-for choice_data in choices173:
-    Choice.objects.create(question=question173, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question173.save()
+for choice in choices173:
+    try:
+        Choice.objects.create(
+            question=question173,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q173] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 174 ===
 question174 = Question.objects.create(
@@ -3839,9 +5208,17 @@ choices174 = [
     {"text": "Leinster Park", "label": "C", "is_correct": False},
     {"text": "lyreen Lodge", "label": "D", "is_correct": False},
 ]
-for choice_data in choices174:
-    Choice.objects.create(question=question174, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question174.save()
+for choice in choices174:
+    try:
+        Choice.objects.create(
+            question=question174,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q174] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 175 ===
 question175 = Question.objects.create(
@@ -3861,9 +5238,17 @@ choices175 = [
     {"text": "Leinster St", "label": "C", "is_correct": False},
     {"text": "Pound Ln", "label": "D", "is_correct": False},
 ]
-for choice_data in choices175:
-    Choice.objects.create(question=question175, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question175.save()
+for choice in choices175:
+    try:
+        Choice.objects.create(
+            question=question175,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q175] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 176 ===
 question176 = Question.objects.create(
@@ -3883,9 +5268,17 @@ choices176 = [
     {"text": "Rowan Tce", "label": "C", "is_correct": False},
     {"text": "Limerick Lane", "label": "D", "is_correct": True},
 ]
-for choice_data in choices176:
-    Choice.objects.create(question=question176, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question176.save()
+for choice in choices176:
+    try:
+        Choice.objects.create(
+            question=question176,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q176] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 177 ===
 question177 = Question.objects.create(
@@ -3905,9 +5298,17 @@ choices177 = [
     {"text": "Liffey View", "label": "C", "is_correct": False},
     {"text": "Limerick Ln", "label": "D", "is_correct": False},
 ]
-for choice_data in choices177:
-    Choice.objects.create(question=question177, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question177.save()
+for choice in choices177:
+    try:
+        Choice.objects.create(
+            question=question177,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q177] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 178 ===
 question178 = Question.objects.create(
@@ -3927,9 +5328,17 @@ choices178 = [
     {"text": "Rowan Tce", "label": "C", "is_correct": False},
     {"text": "Robert St", "label": "D", "is_correct": False},
 ]
-for choice_data in choices178:
-    Choice.objects.create(question=question178, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question178.save()
+for choice in choices178:
+    try:
+        Choice.objects.create(
+            question=question178,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q178] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 179 ===
 question179 = Question.objects.create(
@@ -3949,9 +5358,17 @@ choices179 = [
     {"text": "Corban's Ln", "label": "C", "is_correct": False},
     {"text": "St Martins Ave", "label": "D", "is_correct": False},
 ]
-for choice_data in choices179:
-    Choice.objects.create(question=question179, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question179.save()
+for choice in choices179:
+    try:
+        Choice.objects.create(
+            question=question179,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q179] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 180 ===
 question180 = Question.objects.create(
@@ -3971,9 +5388,17 @@ choices180 = [
     {"text": "Blessignton Rd", "label": "C", "is_correct": False},
     {"text": "Friary Rd", "label": "D", "is_correct": False},
 ]
-for choice_data in choices180:
-    Choice.objects.create(question=question180, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question180.save()
+for choice in choices180:
+    try:
+        Choice.objects.create(
+            question=question180,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q180] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 181 ===
 question181 = Question.objects.create(
@@ -3993,9 +5418,17 @@ choices181 = [
     {"text": "Caragh Rd", "label": "C", "is_correct": False},
     {"text": "John Devoy Rd", "label": "D", "is_correct": True},
 ]
-for choice_data in choices181:
-    Choice.objects.create(question=question181, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question181.save()
+for choice in choices181:
+    try:
+        Choice.objects.create(
+            question=question181,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q181] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 182 ===
 question182 = Question.objects.create(
@@ -4015,9 +5448,17 @@ choices182 = [
     {"text": "White Abbey Rd", "label": "C", "is_correct": False},
     {"text": "Elm Park", "label": "D", "is_correct": False},
 ]
-for choice_data in choices182:
-    Choice.objects.create(question=question182, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question182.save()
+for choice in choices182:
+    try:
+        Choice.objects.create(
+            question=question182,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q182] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 183 ===
 question183 = Question.objects.create(
@@ -4037,9 +5478,17 @@ choices183 = [
     {"text": "Kirwans Ln", "label": "C", "is_correct": False},
     {"text": "Chapel Lane", "label": "D", "is_correct": True},
 ]
-for choice_data in choices183:
-    Choice.objects.create(question=question183, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question183.save()
+for choice in choices183:
+    try:
+        Choice.objects.create(
+            question=question183,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q183] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 184 ===
 question184 = Question.objects.create(
@@ -4059,9 +5508,17 @@ choices184 = [
     {"text": "Celbridge Rd", "label": "C", "is_correct": False},
     {"text": "Barnhall Drive", "label": "D", "is_correct": True},
 ]
-for choice_data in choices184:
-    Choice.objects.create(question=question184, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question184.save()
+for choice in choices184:
+    try:
+        Choice.objects.create(
+            question=question184,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q184] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 185 ===
 question185 = Question.objects.create(
@@ -4081,9 +5538,17 @@ choices185 = [
     {"text": "Naas", "label": "C", "is_correct": False},
     {"text": "Celbridge", "label": "D", "is_correct": True},
 ]
-for choice_data in choices185:
-    Choice.objects.create(question=question185, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question185.save()
+for choice in choices185:
+    try:
+        Choice.objects.create(
+            question=question185,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q185] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 186 ===
 question186 = Question.objects.create(
@@ -4103,9 +5568,17 @@ choices186 = [
     {"text": "Main St", "label": "C", "is_correct": True},
     {"text": "Castletown Dr", "label": "D", "is_correct": False},
 ]
-for choice_data in choices186:
-    Choice.objects.create(question=question186, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question186.save()
+for choice in choices186:
+    try:
+        Choice.objects.create(
+            question=question186,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q186] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 187 ===
 question187 = Question.objects.create(
@@ -4125,9 +5598,17 @@ choices187 = [
     {"text": "Parson St", "label": "C", "is_correct": True},
     {"text": "Parson Lodge", "label": "D", "is_correct": False},
 ]
-for choice_data in choices187:
-    Choice.objects.create(question=question187, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question187.save()
+for choice in choices187:
+    try:
+        Choice.objects.create(
+            question=question187,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q187] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 188 ===
 question188 = Question.objects.create(
@@ -4147,9 +5628,17 @@ choices188 = [
     {"text": "Naas", "label": "C", "is_correct": False},
     {"text": "Straffan", "label": "D", "is_correct": True},
 ]
-for choice_data in choices188:
-    Choice.objects.create(question=question188, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question188.save()
+for choice in choices188:
+    try:
+        Choice.objects.create(
+            question=question188,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q188] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 189 ===
 question189 = Question.objects.create(
@@ -4169,9 +5658,17 @@ choices189 = [
     {"text": "Caragh Rd", "label": "C", "is_correct": False},
     {"text": "Newbridge Rd", "label": "D", "is_correct": True},
 ]
-for choice_data in choices189:
-    Choice.objects.create(question=question189, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question189.save()
+for choice in choices189:
+    try:
+        Choice.objects.create(
+            question=question189,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q189] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 190 ===
 question190 = Question.objects.create(
@@ -4191,9 +5688,17 @@ choices190 = [
     {"text": "Athgarvan Rd", "label": "C", "is_correct": False},
     {"text": "Connell Drive", "label": "D", "is_correct": False},
 ]
-for choice_data in choices190:
-    Choice.objects.create(question=question190, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question190.save()
+for choice in choices190:
+    try:
+        Choice.objects.create(
+            question=question190,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q190] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 191 ===
 question191 = Question.objects.create(
@@ -4213,9 +5718,17 @@ choices191 = [
     {"text": "Market Sq", "label": "C", "is_correct": True},
     {"text": "Bride St", "label": "D", "is_correct": False},
 ]
-for choice_data in choices191:
-    Choice.objects.create(question=question191, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question191.save()
+for choice in choices191:
+    try:
+        Choice.objects.create(
+            question=question191,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q191] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 192 ===
 question192 = Question.objects.create(
@@ -4235,9 +5748,17 @@ choices192 = [
     {"text": "Tully", "label": "C", "is_correct": True},
     {"text": "Miltown", "label": "D", "is_correct": False},
 ]
-for choice_data in choices192:
-    Choice.objects.create(question=question192, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question192.save()
+for choice in choices192:
+    try:
+        Choice.objects.create(
+            question=question192,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q192] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 193 ===
 question193 = Question.objects.create(
@@ -4257,9 +5778,17 @@ choices193 = [
     {"text": "Convent View", "label": "C", "is_correct": False},
     {"text": "Emily Sq", "label": "D", "is_correct": True},
 ]
-for choice_data in choices193:
-    Choice.objects.create(question=question193, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question193.save()
+for choice in choices193:
+    try:
+        Choice.objects.create(
+            question=question193,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q193] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 194 ===
 question194 = Question.objects.create(
@@ -4279,9 +5808,17 @@ choices194 = [
     {"text": "Convent View", "label": "C", "is_correct": False},
     {"text": "Mount Hawkins", "label": "D", "is_correct": False},
 ]
-for choice_data in choices194:
-    Choice.objects.create(question=question194, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question194.save()
+for choice in choices194:
+    try:
+        Choice.objects.create(
+            question=question194,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q194] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 195 ===
 question195 = Question.objects.create(
@@ -4301,9 +5838,17 @@ choices195 = [
     {"text": "Athy", "label": "C", "is_correct": True},
     {"text": "Baltinglass", "label": "D", "is_correct": False},
 ]
-for choice_data in choices195:
-    Choice.objects.create(question=question195, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question195.save()
+for choice in choices195:
+    try:
+        Choice.objects.create(
+            question=question195,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q195] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 196 ===
 question196 = Question.objects.create(
@@ -4323,9 +5868,17 @@ choices196 = [
     {"text": "Patrick St", "label": "C", "is_correct": False},
     {"text": "Station Rd", "label": "D", "is_correct": False},
 ]
-for choice_data in choices196:
-    Choice.objects.create(question=question196, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question196.save()
+for choice in choices196:
+    try:
+        Choice.objects.create(
+            question=question196,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q196] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 197 ===
 question197 = Question.objects.create(
@@ -4345,9 +5898,17 @@ choices197 = [
     {"text": "R415", "label": "C", "is_correct": False},
     {"text": "R445", "label": "D", "is_correct": True},
 ]
-for choice_data in choices197:
-    Choice.objects.create(question=question197, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question197.save()
+for choice in choices197:
+    try:
+        Choice.objects.create(
+            question=question197,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q197] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 198 ===
 question198 = Question.objects.create(
@@ -4367,9 +5928,17 @@ choices198 = [
     {"text": "Morristown Road", "label": "C", "is_correct": False},
     {"text": "Green Road", "label": "D", "is_correct": True},
 ]
-for choice_data in choices198:
-    Choice.objects.create(question=question198, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question198.save()
+for choice in choices198:
+    try:
+        Choice.objects.create(
+            question=question198,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q198] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 199 ===
 question199 = Question.objects.create(
@@ -4389,9 +5958,17 @@ choices199 = [
     {"text": "R415", "label": "C", "is_correct": False},
     {"text": "R416", "label": "D", "is_correct": False},
 ]
-for choice_data in choices199:
-    Choice.objects.create(question=question199, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question199.save()
+for choice in choices199:
+    try:
+        Choice.objects.create(
+            question=question199,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q199] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 200 ===
 question200 = Question.objects.create(
@@ -4411,9 +5988,17 @@ choices200 = [
     {"text": "Abbeylands", "label": "C", "is_correct": True},
     {"text": "Brooklands", "label": "D", "is_correct": False},
 ]
-for choice_data in choices200:
-    Choice.objects.create(question=question200, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question200.save()
+for choice in choices200:
+    try:
+        Choice.objects.create(
+            question=question200,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q200] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 201 ===
 question201 = Question.objects.create(
@@ -4433,9 +6018,17 @@ choices201 = [
     {"text": "The Black Avenue", "label": "C", "is_correct": False},
     {"text": "", "label": "D", "is_correct": False},
 ]
-for choice_data in choices201:
-    Choice.objects.create(question=question201, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question201.save()
+for choice in choices201:
+    try:
+        Choice.objects.create(
+            question=question201,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q201] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 202 ===
 question202 = Question.objects.create(
@@ -4455,9 +6048,17 @@ choices202 = [
     {"text": "Green Lane", "label": "C", "is_correct": False},
     {"text": "Main Street", "label": "D", "is_correct": True},
 ]
-for choice_data in choices202:
-    Choice.objects.create(question=question202, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question202.save()
+for choice in choices202:
+    try:
+        Choice.objects.create(
+            question=question202,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q202] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 203 ===
 question203 = Question.objects.create(
@@ -4477,9 +6078,17 @@ choices203 = [
     {"text": "Stacumny Lane", "label": "C", "is_correct": True},
     {"text": "Saint Catherines Park", "label": "D", "is_correct": False},
 ]
-for choice_data in choices203:
-    Choice.objects.create(question=question203, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question203.save()
+for choice in choices203:
+    try:
+        Choice.objects.create(
+            question=question203,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q203] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 204 ===
 question204 = Question.objects.create(
@@ -4499,9 +6108,17 @@ choices204 = [
     {"text": "Straffan Road", "label": "C", "is_correct": True},
     {"text": "Kilcock Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices204:
-    Choice.objects.create(question=question204, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question204.save()
+for choice in choices204:
+    try:
+        Choice.objects.create(
+            question=question204,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q204] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 205 ===
 question205 = Question.objects.create(
@@ -4521,9 +6138,17 @@ choices205 = [
     {"text": "Poplar Square", "label": "C", "is_correct": True},
     {"text": "Moat Lane", "label": "D", "is_correct": False},
 ]
-for choice_data in choices205:
-    Choice.objects.create(question=question205, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question205.save()
+for choice in choices205:
+    try:
+        Choice.objects.create(
+            question=question205,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q205] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 206 ===
 question206 = Question.objects.create(
@@ -4543,9 +6168,17 @@ choices206 = [
     {"text": "Newbridge Road", "label": "C", "is_correct": False},
     {"text": "Kilcullen Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices206:
-    Choice.objects.create(question=question206, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question206.save()
+for choice in choices206:
+    try:
+        Choice.objects.create(
+            question=question206,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q206] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 207 ===
 question207 = Question.objects.create(
@@ -4565,9 +6198,17 @@ choices207 = [
     {"text": "Church Lane", "label": "C", "is_correct": False},
     {"text": "Newbridge Road", "label": "D", "is_correct": True},
 ]
-for choice_data in choices207:
-    Choice.objects.create(question=question207, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question207.save()
+for choice in choices207:
+    try:
+        Choice.objects.create(
+            question=question207,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q207] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 208 ===
 question208 = Question.objects.create(
@@ -4587,9 +6228,17 @@ choices208 = [
     {"text": "Corban's Lane", "label": "C", "is_correct": False},
     {"text": "Sallins Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices208:
-    Choice.objects.create(question=question208, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question208.save()
+for choice in choices208:
+    try:
+        Choice.objects.create(
+            question=question208,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q208] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 209 ===
 question209 = Question.objects.create(
@@ -4609,9 +6258,17 @@ choices209 = [
     {"text": "The Park", "label": "C", "is_correct": False},
     {"text": "Kilcullen Road", "label": "D", "is_correct": True},
 ]
-for choice_data in choices209:
-    Choice.objects.create(question=question209, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question209.save()
+for choice in choices209:
+    try:
+        Choice.objects.create(
+            question=question209,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q209] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 210 ===
 question210 = Question.objects.create(
@@ -4631,9 +6288,17 @@ choices210 = [
     {"text": "Monasterevin Road", "label": "C", "is_correct": False},
     {"text": "Dublin Street", "label": "D", "is_correct": True},
 ]
-for choice_data in choices210:
-    Choice.objects.create(question=question210, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question210.save()
+for choice in choices210:
+    try:
+        Choice.objects.create(
+            question=question210,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q210] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 211 ===
 question211 = Question.objects.create(
@@ -4653,9 +6318,17 @@ choices211 = [
     {"text": "Beechgrove", "label": "C", "is_correct": False},
     {"text": "Meadow Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices211:
-    Choice.objects.create(question=question211, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question211.save()
+for choice in choices211:
+    try:
+        Choice.objects.create(
+            question=question211,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q211] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 212 ===
 question212 = Question.objects.create(
@@ -4675,9 +6348,17 @@ choices212 = [
     {"text": "Geraldine Road", "label": "C", "is_correct": False},
     {"text": "Dublin Road", "label": "D", "is_correct": True},
 ]
-for choice_data in choices212:
-    Choice.objects.create(question=question212, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question212.save()
+for choice in choices212:
+    try:
+        Choice.objects.create(
+            question=question212,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q212] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 213 ===
 question213 = Question.objects.create(
@@ -4697,9 +6378,17 @@ choices213 = [
     {"text": "Millicent Road", "label": "C", "is_correct": True},
     {"text": "Main Street", "label": "D", "is_correct": False},
 ]
-for choice_data in choices213:
-    Choice.objects.create(question=question213, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question213.save()
+for choice in choices213:
+    try:
+        Choice.objects.create(
+            question=question213,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q213] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 214 ===
 question214 = Question.objects.create(
@@ -4719,9 +6408,17 @@ choices214 = [
     {"text": "The Avenue", "label": "C", "is_correct": False},
     {"text": "Millicent Road", "label": "D", "is_correct": True},
 ]
-for choice_data in choices214:
-    Choice.objects.create(question=question214, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question214.save()
+for choice in choices214:
+    try:
+        Choice.objects.create(
+            question=question214,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q214] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 215 ===
 question215 = Question.objects.create(
@@ -4741,9 +6438,17 @@ choices215 = [
     {"text": "Corban's Lane", "label": "C", "is_correct": False},
     {"text": "Ballycane Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices215:
-    Choice.objects.create(question=question215, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question215.save()
+for choice in choices215:
+    try:
+        Choice.objects.create(
+            question=question215,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q215] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 216 ===
 question216 = Question.objects.create(
@@ -4763,9 +6468,17 @@ choices216 = [
     {"text": "Curragh Grange", "label": "C", "is_correct": False},
     {"text": "Kilbelin Alley", "label": "D", "is_correct": False},
 ]
-for choice_data in choices216:
-    Choice.objects.create(question=question216, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question216.save()
+for choice in choices216:
+    try:
+        Choice.objects.create(
+            question=question216,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q216] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 217 ===
 question217 = Question.objects.create(
@@ -4785,9 +6498,17 @@ choices217 = [
     {"text": "R416", "label": "C", "is_correct": True},
     {"text": "R445", "label": "D", "is_correct": False},
 ]
-for choice_data in choices217:
-    Choice.objects.create(question=question217, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question217.save()
+for choice in choices217:
+    try:
+        Choice.objects.create(
+            question=question217,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q217] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 218 ===
 question218 = Question.objects.create(
@@ -4807,9 +6528,17 @@ choices218 = [
     {"text": "Grey Abbey Road", "label": "C", "is_correct": False},
     {"text": "Curragh Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices218:
-    Choice.objects.create(question=question218, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question218.save()
+for choice in choices218:
+    try:
+        Choice.objects.create(
+            question=question218,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q218] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 219 ===
 question219 = Question.objects.create(
@@ -4829,9 +6558,17 @@ choices219 = [
     {"text": "Woodstock Street", "label": "C", "is_correct": False},
     {"text": "Rockfield Road", "label": "D", "is_correct": True},
 ]
-for choice_data in choices219:
-    Choice.objects.create(question=question219, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question219.save()
+for choice in choices219:
+    try:
+        Choice.objects.create(
+            question=question219,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q219] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 220 ===
 question220 = Question.objects.create(
@@ -4851,9 +6588,17 @@ choices220 = [
     {"text": "Celbridge Road", "label": "C", "is_correct": True},
     {"text": "Green Lane", "label": "D", "is_correct": False},
 ]
-for choice_data in choices220:
-    Choice.objects.create(question=question220, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question220.save()
+for choice in choices220:
+    try:
+        Choice.objects.create(
+            question=question220,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q220] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 221 ===
 question221 = Question.objects.create(
@@ -4873,9 +6618,17 @@ choices221 = [
     {"text": "Kilcock", "label": "C", "is_correct": False},
     {"text": "Celbridge", "label": "D", "is_correct": False},
 ]
-for choice_data in choices221:
-    Choice.objects.create(question=question221, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question221.save()
+for choice in choices221:
+    try:
+        Choice.objects.create(
+            question=question221,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q221] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 222 ===
 question222 = Question.objects.create(
@@ -4895,9 +6648,17 @@ choices222 = [
     {"text": "R406", "label": "C", "is_correct": False},
     {"text": "R405", "label": "D", "is_correct": False},
 ]
-for choice_data in choices222:
-    Choice.objects.create(question=question222, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question222.save()
+for choice in choices222:
+    try:
+        Choice.objects.create(
+            question=question222,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q222] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 223 ===
 question223 = Question.objects.create(
@@ -4917,9 +6678,17 @@ choices223 = [
     {"text": "Laurence Avenue", "label": "C", "is_correct": False},
     {"text": "Rathcoffey Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices223:
-    Choice.objects.create(question=question223, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question223.save()
+for choice in choices223:
+    try:
+        Choice.objects.create(
+            question=question223,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q223] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 224 ===
 question224 = Question.objects.create(
@@ -4939,9 +6708,17 @@ choices224 = [
     {"text": "Silken Vale", "label": "C", "is_correct": False},
     {"text": "Moyglare Road", "label": "D", "is_correct": True},
 ]
-for choice_data in choices224:
-    Choice.objects.create(question=question224, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question224.save()
+for choice in choices224:
+    try:
+        Choice.objects.create(
+            question=question224,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q224] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 225 ===
 question225 = Question.objects.create(
@@ -4961,9 +6738,17 @@ choices225 = [
     {"text": "The Way", "label": "C", "is_correct": False},
     {"text": "Duncreevan", "label": "D", "is_correct": False},
 ]
-for choice_data in choices225:
-    Choice.objects.create(question=question225, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question225.save()
+for choice in choices225:
+    try:
+        Choice.objects.create(
+            question=question225,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q225] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 226 ===
 question226 = Question.objects.create(
@@ -4983,9 +6768,17 @@ choices226 = [
     {"text": "Kilcock Road", "label": "C", "is_correct": False},
     {"text": "Church Street", "label": "D", "is_correct": True},
 ]
-for choice_data in choices226:
-    Choice.objects.create(question=question226, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question226.save()
+for choice in choices226:
+    try:
+        Choice.objects.create(
+            question=question226,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q226] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 227 ===
 question227 = Question.objects.create(
@@ -5005,9 +6798,17 @@ choices227 = [
     {"text": "Celbridge", "label": "C", "is_correct": False},
     {"text": "Maynooth", "label": "D", "is_correct": False},
 ]
-for choice_data in choices227:
-    Choice.objects.create(question=question227, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question227.save()
+for choice in choices227:
+    try:
+        Choice.objects.create(
+            question=question227,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q227] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 228 ===
 question228 = Question.objects.create(
@@ -5027,9 +6828,17 @@ choices228 = [
     {"text": "Clane Relief Road", "label": "C", "is_correct": False},
     {"text": "College Road", "label": "D", "is_correct": True},
 ]
-for choice_data in choices228:
-    Choice.objects.create(question=question228, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question228.save()
+for choice in choices228:
+    try:
+        Choice.objects.create(
+            question=question228,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q228] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 229 ===
 question229 = Question.objects.create(
@@ -5049,9 +6858,17 @@ choices229 = [
     {"text": "Pacelli Road", "label": "C", "is_correct": False},
     {"text": "Limerick Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices229:
-    Choice.objects.create(question=question229, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question229.save()
+for choice in choices229:
+    try:
+        Choice.objects.create(
+            question=question229,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q229] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 230 ===
 question230 = Question.objects.create(
@@ -5071,9 +6888,17 @@ choices230 = [
     {"text": "Kerdiff Close", "label": "C", "is_correct": True},
     {"text": "Monread Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices230:
-    Choice.objects.create(question=question230, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question230.save()
+for choice in choices230:
+    try:
+        Choice.objects.create(
+            question=question230,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q230] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 231 ===
 question231 = Question.objects.create(
@@ -5093,9 +6918,17 @@ choices231 = [
     {"text": "The Sycamores", "label": "C", "is_correct": False},
     {"text": "Ashgrove Drive", "label": "D", "is_correct": True},
 ]
-for choice_data in choices231:
-    Choice.objects.create(question=question231, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question231.save()
+for choice in choices231:
+    try:
+        Choice.objects.create(
+            question=question231,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q231] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 232 ===
 question232 = Question.objects.create(
@@ -5115,9 +6948,17 @@ choices232 = [
     {"text": "Oak Glade Close", "label": "C", "is_correct": False},
     {"text": "Craddockstown road", "label": "D", "is_correct": True},
 ]
-for choice_data in choices232:
-    Choice.objects.create(question=question232, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question232.save()
+for choice in choices232:
+    try:
+        Choice.objects.create(
+            question=question232,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q232] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 233 ===
 question233 = Question.objects.create(
@@ -5137,9 +6978,17 @@ choices233 = [
     {"text": "Southgreen Road", "label": "C", "is_correct": False},
     {"text": "Rathbride Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices233:
-    Choice.objects.create(question=question233, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question233.save()
+for choice in choices233:
+    try:
+        Choice.objects.create(
+            question=question233,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q233] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 234 ===
 question234 = Question.objects.create(
@@ -5159,9 +7008,17 @@ choices234 = [
     {"text": "Dunmurray", "label": "C", "is_correct": False},
     {"text": "Athy Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices234:
-    Choice.objects.create(question=question234, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question234.save()
+for choice in choices234:
+    try:
+        Choice.objects.create(
+            question=question234,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q234] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 235 ===
 question235 = Question.objects.create(
@@ -5181,9 +7038,17 @@ choices235 = [
     {"text": "Melitta Road", "label": "C", "is_correct": False},
     {"text": "Tully Road", "label": "D", "is_correct": True},
 ]
-for choice_data in choices235:
-    Choice.objects.create(question=question235, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question235.save()
+for choice in choices235:
+    try:
+        Choice.objects.create(
+            question=question235,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q235] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 236 ===
 question236 = Question.objects.create(
@@ -5203,9 +7068,17 @@ choices236 = [
     {"text": "Newbridge", "label": "C", "is_correct": False},
     {"text": "Athy", "label": "D", "is_correct": False},
 ]
-for choice_data in choices236:
-    Choice.objects.create(question=question236, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question236.save()
+for choice in choices236:
+    try:
+        Choice.objects.create(
+            question=question236,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q236] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 237 ===
 question237 = Question.objects.create(
@@ -5225,9 +7098,17 @@ choices237 = [
     {"text": "Dublin Road", "label": "C", "is_correct": True},
     {"text": "Tubber Lane Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices237:
-    Choice.objects.create(question=question237, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question237.save()
+for choice in choices237:
+    try:
+        Choice.objects.create(
+            question=question237,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q237] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 238 ===
 question238 = Question.objects.create(
@@ -5247,9 +7128,17 @@ choices238 = [
     {"text": "St. Raphael's Avenue", "label": "C", "is_correct": True},
     {"text": "Oldtown Mill Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices238:
-    Choice.objects.create(question=question238, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question238.save()
+for choice in choices238:
+    try:
+        Choice.objects.create(
+            question=question238,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q238] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 239 ===
 question239 = Question.objects.create(
@@ -5269,9 +7158,17 @@ choices239 = [
     {"text": "Mount Hawkins", "label": "C", "is_correct": False},
     {"text": "Woodstock Street", "label": "D", "is_correct": True},
 ]
-for choice_data in choices239:
-    Choice.objects.create(question=question239, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question239.save()
+for choice in choices239:
+    try:
+        Choice.objects.create(
+            question=question239,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q239] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 240 ===
 question240 = Question.objects.create(
@@ -5291,9 +7188,17 @@ choices240 = [
     {"text": "Canal Bank", "label": "C", "is_correct": False},
     {"text": "Monread Road", "label": "D", "is_correct": True},
 ]
-for choice_data in choices240:
-    Choice.objects.create(question=question240, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question240.save()
+for choice in choices240:
+    try:
+        Choice.objects.create(
+            question=question240,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q240] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 241 ===
 question241 = Question.objects.create(
@@ -5313,9 +7218,17 @@ choices241 = [
     {"text": "Abbey Road", "label": "C", "is_correct": True},
     {"text": "Limerick Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices241:
-    Choice.objects.create(question=question241, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question241.save()
+for choice in choices241:
+    try:
+        Choice.objects.create(
+            question=question241,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q241] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 242 ===
 question242 = Question.objects.create(
@@ -5335,9 +7248,17 @@ choices242 = [
     {"text": "Liffey View", "label": "C", "is_correct": False},
     {"text": "Moorefield Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices242:
-    Choice.objects.create(question=question242, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question242.save()
+for choice in choices242:
+    try:
+        Choice.objects.create(
+            question=question242,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q242] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 243 ===
 question243 = Question.objects.create(
@@ -5357,9 +7278,17 @@ choices243 = [
     {"text": "Carton Road", "label": "C", "is_correct": False},
     {"text": "Mill Street", "label": "D", "is_correct": True},
 ]
-for choice_data in choices243:
-    Choice.objects.create(question=question243, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question243.save()
+for choice in choices243:
+    try:
+        Choice.objects.create(
+            question=question243,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q243] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 244 ===
 question244 = Question.objects.create(
@@ -5379,9 +7308,17 @@ choices244 = [
     {"text": "Millenium Park", "label": "C", "is_correct": False},
     {"text": "Osberstown Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices244:
-    Choice.objects.create(question=question244, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question244.save()
+for choice in choices244:
+    try:
+        Choice.objects.create(
+            question=question244,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q244] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 245 ===
 question245 = Question.objects.create(
@@ -5401,9 +7338,17 @@ choices245 = [
     {"text": "Tipper Road", "label": "C", "is_correct": False},
     {"text": "Sallins Road", "label": "D", "is_correct": True},
 ]
-for choice_data in choices245:
-    Choice.objects.create(question=question245, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question245.save()
+for choice in choices245:
+    try:
+        Choice.objects.create(
+            question=question245,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q245] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 246 ===
 question246 = Question.objects.create(
@@ -5423,9 +7368,17 @@ choices246 = [
     {"text": "College Grove", "label": "C", "is_correct": False},
     {"text": "Hawthorn Close", "label": "D", "is_correct": True},
 ]
-for choice_data in choices246:
-    Choice.objects.create(question=question246, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question246.save()
+for choice in choices246:
+    try:
+        Choice.objects.create(
+            question=question246,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q246] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 247 ===
 question247 = Question.objects.create(
@@ -5445,9 +7398,17 @@ choices247 = [
     {"text": "Market Square", "label": "C", "is_correct": False},
     {"text": "Monasterevin Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices247:
-    Choice.objects.create(question=question247, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question247.save()
+for choice in choices247:
+    try:
+        Choice.objects.create(
+            question=question247,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q247] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 248 ===
 question248 = Question.objects.create(
@@ -5467,9 +7428,17 @@ choices248 = [
     {"text": "Park View", "label": "C", "is_correct": False},
     {"text": "Ballinagappa Road", "label": "D", "is_correct": True},
 ]
-for choice_data in choices248:
-    Choice.objects.create(question=question248, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question248.save()
+for choice in choices248:
+    try:
+        Choice.objects.create(
+            question=question248,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q248] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 249 ===
 question249 = Question.objects.create(
@@ -5489,9 +7458,17 @@ choices249 = [
     {"text": "Prosperous Road", "label": "C", "is_correct": True},
     {"text": "Millicent Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices249:
-    Choice.objects.create(question=question249, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question249.save()
+for choice in choices249:
+    try:
+        Choice.objects.create(
+            question=question249,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q249] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 250 ===
 question250 = Question.objects.create(
@@ -5511,9 +7488,17 @@ choices250 = [
     {"text": "Sallins Link Road", "label": "C", "is_correct": False},
     {"text": "Prosperous Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices250:
-    Choice.objects.create(question=question250, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question250.save()
+for choice in choices250:
+    try:
+        Choice.objects.create(
+            question=question250,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q250] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 251 ===
 question251 = Question.objects.create(
@@ -5533,9 +7518,17 @@ choices251 = [
     {"text": "R407", "label": "C", "is_correct": True},
     {"text": "R408", "label": "D", "is_correct": False},
 ]
-for choice_data in choices251:
-    Choice.objects.create(question=question251, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question251.save()
+for choice in choices251:
+    try:
+        Choice.objects.create(
+            question=question251,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q251] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 252 ===
 question252 = Question.objects.create(
@@ -5555,9 +7548,17 @@ choices252 = [
     {"text": "R448", "label": "C", "is_correct": True},
     {"text": "R148", "label": "D", "is_correct": False},
 ]
-for choice_data in choices252:
-    Choice.objects.create(question=question252, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question252.save()
+for choice in choices252:
+    try:
+        Choice.objects.create(
+            question=question252,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q252] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 253 ===
 question253 = Question.objects.create(
@@ -5577,9 +7578,17 @@ choices253 = [
     {"text": "R412", "label": "C", "is_correct": False},
     {"text": "R411", "label": "D", "is_correct": True},
 ]
-for choice_data in choices253:
-    Choice.objects.create(question=question253, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question253.save()
+for choice in choices253:
+    try:
+        Choice.objects.create(
+            question=question253,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q253] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 254 ===
 question254 = Question.objects.create(
@@ -5599,9 +7608,17 @@ choices254 = [
     {"text": "Tipper Road", "label": "C", "is_correct": True},
     {"text": "Ballymore Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices254:
-    Choice.objects.create(question=question254, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question254.save()
+for choice in choices254:
+    try:
+        Choice.objects.create(
+            question=question254,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q254] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 255 ===
 question255 = Question.objects.create(
@@ -5621,9 +7638,17 @@ choices255 = [
     {"text": "St Michaels's Terrace", "label": "C", "is_correct": False},
     {"text": "Devoy Quarter", "label": "D", "is_correct": True},
 ]
-for choice_data in choices255:
-    Choice.objects.create(question=question255, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question255.save()
+for choice in choices255:
+    try:
+        Choice.objects.create(
+            question=question255,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q255] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 256 ===
 question256 = Question.objects.create(
@@ -5643,9 +7668,17 @@ choices256 = [
     {"text": "R405", "label": "C", "is_correct": False},
     {"text": "R449", "label": "D", "is_correct": True},
 ]
-for choice_data in choices256:
-    Choice.objects.create(question=question256, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question256.save()
+for choice in choices256:
+    try:
+        Choice.objects.create(
+            question=question256,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q256] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 257 ===
 question257 = Question.objects.create(
@@ -5665,9 +7698,17 @@ choices257 = [
     {"text": "Station Road", "label": "C", "is_correct": False},
     {"text": "Accommodation Road", "label": "D", "is_correct": True},
 ]
-for choice_data in choices257:
-    Choice.objects.create(question=question257, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question257.save()
+for choice in choices257:
+    try:
+        Choice.objects.create(
+            question=question257,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q257] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 258 ===
 question258 = Question.objects.create(
@@ -5687,9 +7728,17 @@ choices258 = [
     {"text": "R415", "label": "C", "is_correct": True},
     {"text": "R416", "label": "D", "is_correct": False},
 ]
-for choice_data in choices258:
-    Choice.objects.create(question=question258, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question258.save()
+for choice in choices258:
+    try:
+        Choice.objects.create(
+            question=question258,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q258] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 259 ===
 question259 = Question.objects.create(
@@ -5709,9 +7758,17 @@ choices259 = [
     {"text": "Morristown Road", "label": "C", "is_correct": False},
     {"text": "Henry Street", "label": "D", "is_correct": True},
 ]
-for choice_data in choices259:
-    Choice.objects.create(question=question259, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question259.save()
+for choice in choices259:
+    try:
+        Choice.objects.create(
+            question=question259,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q259] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 260 ===
 question260 = Question.objects.create(
@@ -5731,9 +7788,17 @@ choices260 = [
     {"text": "Cutlery Road", "label": "C", "is_correct": False},
     {"text": "Athgarvan Road", "label": "D", "is_correct": True},
 ]
-for choice_data in choices260:
-    Choice.objects.create(question=question260, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question260.save()
+for choice in choices260:
+    try:
+        Choice.objects.create(
+            question=question260,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q260] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 261 ===
 question261 = Question.objects.create(
@@ -5753,9 +7818,17 @@ choices261 = [
     {"text": "Langton Road", "label": "C", "is_correct": False},
     {"text": "Curragh Grange", "label": "D", "is_correct": False},
 ]
-for choice_data in choices261:
-    Choice.objects.create(question=question261, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question261.save()
+for choice in choices261:
+    try:
+        Choice.objects.create(
+            question=question261,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q261] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 262 ===
 question262 = Question.objects.create(
@@ -5775,9 +7848,17 @@ choices262 = [
     {"text": "R401", "label": "C", "is_correct": False},
     {"text": "R413", "label": "D", "is_correct": False},
 ]
-for choice_data in choices262:
-    Choice.objects.create(question=question262, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question262.save()
+for choice in choices262:
+    try:
+        Choice.objects.create(
+            question=question262,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q262] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 263 ===
 question263 = Question.objects.create(
@@ -5797,9 +7878,17 @@ choices263 = [
     {"text": "Station Road", "label": "C", "is_correct": True},
     {"text": "Athgarvan Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices263:
-    Choice.objects.create(question=question263, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question263.save()
+for choice in choices263:
+    try:
+        Choice.objects.create(
+            question=question263,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q263] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 264 ===
 question264 = Question.objects.create(
@@ -5819,9 +7908,17 @@ choices264 = [
     {"text": "Old Road", "label": "C", "is_correct": False},
     {"text": "Melitta Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices264:
-    Choice.objects.create(question=question264, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question264.save()
+for choice in choices264:
+    try:
+        Choice.objects.create(
+            question=question264,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q264] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 265 ===
 question265 = Question.objects.create(
@@ -5841,9 +7938,17 @@ choices265 = [
     {"text": "Bride Street", "label": "C", "is_correct": False},
     {"text": "Dublin Road", "label": "D", "is_correct": True},
 ]
-for choice_data in choices265:
-    Choice.objects.create(question=question265, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question265.save()
+for choice in choices265:
+    try:
+        Choice.objects.create(
+            question=question265,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q265] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 266 ===
 question266 = Question.objects.create(
@@ -5863,9 +7968,17 @@ choices266 = [
     {"text": "Moyglare Abbey", "label": "C", "is_correct": False},
     {"text": "Straffan Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices266:
-    Choice.objects.create(question=question266, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question266.save()
+for choice in choices266:
+    try:
+        Choice.objects.create(
+            question=question266,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q266] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 267 ===
 question267 = Question.objects.create(
@@ -5885,9 +7998,17 @@ choices267 = [
     {"text": "Stanhope Street", "label": "C", "is_correct": True},
     {"text": "Rockfield Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices267:
-    Choice.objects.create(question=question267, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question267.save()
+for choice in choices267:
+    try:
+        Choice.objects.create(
+            question=question267,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q267] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 268 ===
 question268 = Question.objects.create(
@@ -5907,9 +8028,17 @@ choices268 = [
     {"text": "William Street", "label": "C", "is_correct": False},
     {"text": "Duke Street", "label": "D", "is_correct": True},
 ]
-for choice_data in choices268:
-    Choice.objects.create(question=question268, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question268.save()
+for choice in choices268:
+    try:
+        Choice.objects.create(
+            question=question268,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q268] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 269 ===
 question269 = Question.objects.create(
@@ -5929,9 +8058,17 @@ choices269 = [
     {"text": "Mansfield Grove", "label": "C", "is_correct": False},
     {"text": "Marina Court", "label": "D", "is_correct": True},
 ]
-for choice_data in choices269:
-    Choice.objects.create(question=question269, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question269.save()
+for choice in choices269:
+    try:
+        Choice.objects.create(
+            question=question269,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q269] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 270 ===
 question270 = Question.objects.create(
@@ -5951,9 +8088,17 @@ choices270 = [
     {"text": "Mansfield Grove", "label": "C", "is_correct": False},
     {"text": "Dublin Road", "label": "D", "is_correct": True},
 ]
-for choice_data in choices270:
-    Choice.objects.create(question=question270, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question270.save()
+for choice in choices270:
+    try:
+        Choice.objects.create(
+            question=question270,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q270] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 271 ===
 question271 = Question.objects.create(
@@ -5973,9 +8118,17 @@ choices271 = [
     {"text": "Woodstock Street", "label": "C", "is_correct": False},
     {"text": "Geraldine Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices271:
-    Choice.objects.create(question=question271, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question271.save()
+for choice in choices271:
+    try:
+        Choice.objects.create(
+            question=question271,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q271] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 272 ===
 question272 = Question.objects.create(
@@ -5995,9 +8148,17 @@ choices272 = [
     {"text": "Green Lane", "label": "C", "is_correct": False},
     {"text": "Celbridge Road", "label": "D", "is_correct": True},
 ]
-for choice_data in choices272:
-    Choice.objects.create(question=question272, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question272.save()
+for choice in choices272:
+    try:
+        Choice.objects.create(
+            question=question272,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q272] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 273 ===
 question273 = Question.objects.create(
@@ -6017,9 +8178,17 @@ choices273 = [
     {"text": "Captains Hill", "label": "C", "is_correct": True},
     {"text": "The Grove", "label": "D", "is_correct": False},
 ]
-for choice_data in choices273:
-    Choice.objects.create(question=question273, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question273.save()
+for choice in choices273:
+    try:
+        Choice.objects.create(
+            question=question273,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q273] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 274 ===
 question274 = Question.objects.create(
@@ -6039,9 +8208,17 @@ choices274 = [
     {"text": "The Black Avenue", "label": "C", "is_correct": False},
     {"text": "Mill Lane", "label": "D", "is_correct": False},
 ]
-for choice_data in choices274:
-    Choice.objects.create(question=question274, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question274.save()
+for choice in choices274:
+    try:
+        Choice.objects.create(
+            question=question274,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q274] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 275 ===
 question275 = Question.objects.create(
@@ -6061,9 +8238,17 @@ choices275 = [
     {"text": "Moyglare Road", "label": "C", "is_correct": False},
     {"text": "Straffan Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices275:
-    Choice.objects.create(question=question275, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question275.save()
+for choice in choices275:
+    try:
+        Choice.objects.create(
+            question=question275,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q275] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 276 ===
 question276 = Question.objects.create(
@@ -6083,9 +8268,17 @@ choices276 = [
     {"text": "Main Street", "label": "C", "is_correct": False},
     {"text": "Abbey Bridge", "label": "D", "is_correct": False},
 ]
-for choice_data in choices276:
-    Choice.objects.create(question=question276, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question276.save()
+for choice in choices276:
+    try:
+        Choice.objects.create(
+            question=question276,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q276] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 277 ===
 question277 = Question.objects.create(
@@ -6105,9 +8298,17 @@ choices277 = [
     {"text": "Main Street", "label": "C", "is_correct": True},
     {"text": "Abbey Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices277:
-    Choice.objects.create(question=question277, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question277.save()
+for choice in choices277:
+    try:
+        Choice.objects.create(
+            question=question277,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q277] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 278 ===
 question278 = Question.objects.create(
@@ -6127,9 +8328,17 @@ choices278 = [
     {"text": "Sallins Road", "label": "C", "is_correct": True},
     {"text": "Friary Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices278:
-    Choice.objects.create(question=question278, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question278.save()
+for choice in choices278:
+    try:
+        Choice.objects.create(
+            question=question278,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q278] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 279 ===
 question279 = Question.objects.create(
@@ -6149,9 +8358,17 @@ choices279 = [
     {"text": "Blessington Road", "label": "C", "is_correct": False},
     {"text": "Glynn", "label": "D", "is_correct": False},
 ]
-for choice_data in choices279:
-    Choice.objects.create(question=question279, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question279.save()
+for choice in choices279:
+    try:
+        Choice.objects.create(
+            question=question279,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q279] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 280 ===
 question280 = Question.objects.create(
@@ -6171,9 +8388,17 @@ choices280 = [
     {"text": "The Priory", "label": "C", "is_correct": False},
     {"text": "Mount Carmel", "label": "D", "is_correct": True},
 ]
-for choice_data in choices280:
-    Choice.objects.create(question=question280, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question280.save()
+for choice in choices280:
+    try:
+        Choice.objects.create(
+            question=question280,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q280] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 281 ===
 question281 = Question.objects.create(
@@ -6193,9 +8418,17 @@ choices281 = [
     {"text": "Curragh Road", "label": "C", "is_correct": False},
     {"text": "Bride Street", "label": "D", "is_correct": True},
 ]
-for choice_data in choices281:
-    Choice.objects.create(question=question281, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question281.save()
+for choice in choices281:
+    try:
+        Choice.objects.create(
+            question=question281,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q281] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 282 ===
 question282 = Question.objects.create(
@@ -6215,9 +8448,17 @@ choices282 = [
     {"text": "Drumcree Court", "label": "C", "is_correct": False},
     {"text": "Priests Lane", "label": "D", "is_correct": False},
 ]
-for choice_data in choices282:
-    Choice.objects.create(question=question282, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question282.save()
+for choice in choices282:
+    try:
+        Choice.objects.create(
+            question=question282,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q282] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 283 ===
 question283 = Question.objects.create(
@@ -6237,9 +8478,17 @@ choices283 = [
     {"text": "Chapel Lane", "label": "C", "is_correct": False},
     {"text": "Melitta Road", "label": "D", "is_correct": True},
 ]
-for choice_data in choices283:
-    Choice.objects.create(question=question283, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question283.save()
+for choice in choices283:
+    try:
+        Choice.objects.create(
+            question=question283,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q283] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 284 ===
 question284 = Question.objects.create(
@@ -6259,9 +8508,17 @@ choices284 = [
     {"text": "Barrow Way", "label": "C", "is_correct": False},
     {"text": "Kiingsgrove", "label": "D", "is_correct": False},
 ]
-for choice_data in choices284:
-    Choice.objects.create(question=question284, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question284.save()
+for choice in choices284:
+    try:
+        Choice.objects.create(
+            question=question284,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q284] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 285 ===
 question285 = Question.objects.create(
@@ -6281,9 +8538,17 @@ choices285 = [
     {"text": "St Dominic's Park", "label": "C", "is_correct": False},
     {"text": "Woodstock Street", "label": "D", "is_correct": True},
 ]
-for choice_data in choices285:
-    Choice.objects.create(question=question285, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question285.save()
+for choice in choices285:
+    try:
+        Choice.objects.create(
+            question=question285,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q285] Failed to create choice {choice['label']}: {e}")
+
 
 # === Question 286 ===
 question286 = Question.objects.create(
@@ -6303,9 +8568,17 @@ choices286 = [
     {"text": "Convent View", "label": "C", "is_correct": False},
     {"text": "Church Road", "label": "D", "is_correct": False},
 ]
-for choice_data in choices286:
-    Choice.objects.create(question=question286, choice_text=choice_data["text"], option_label=choice_data["label"], is_correct=choice_data["is_correct"])
-question286.save()
+for choice in choices286:
+    try:
+        Choice.objects.create(
+            question=question286,
+            choice_text=choice["text"],
+            option_label=choice["label"],
+            is_correct=choice["is_correct"]
+        )
+    except Exception as e:
+        print(f"[Q286] Failed to create choice {choice['label']}: {e}")
+
 
 print("✅ All questions created successfully.")
 ## cd /d "g:\MyCode\App Taxi Exam" && python manage.py shell < create_questions_all.py
