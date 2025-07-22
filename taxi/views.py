@@ -206,11 +206,6 @@ def question_list(request):
     if search:
         questions = questions.filter(question_text__icontains=search)
     
-    # Type filter
-    question_type = request.GET.get('type')
-    if question_type:
-        questions = questions.filter(question_type=question_type)
-    
     # Category filter
     category = request.GET.get('category')
     if category:

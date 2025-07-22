@@ -16,7 +16,7 @@
 
 <!-- Search and Filter -->
 <div class="row mb-3">
-    <div class="col-md-4">
+    <div class="col-md-6">
         <div class="input-group search-box">
             <input type="text" class="form-control" id="searchInput" placeholder="Search questions...">
             <button class="btn btn-outline-secondary" type="button" id="searchBtn">
@@ -24,14 +24,7 @@
             </button>
         </div>
     </div>
-    <div class="col-md-3">
-        <select class="form-select" id="typeFilter">
-            <option value="">All Types</option>
-            <option value="single">Single Answer</option>
-            <option value="multiple">Multiple Answer</option>
-        </select>
-    </div>
-    <div class="col-md-3">
+    <div class="col-md-4">
         <select class="form-select" id="categoryFilter">
             <option value="">All Categories</option>
             {% for category in all_categories %}
@@ -60,7 +53,7 @@
                     <tr>
                         <th>ID</th>
                         <th>Question</th>
-                        <th>Type</th>
+                        <th>Answer</th>
                         <th>Categories</th>
                         <th>Choices</th>
                         <th>Created</th>
@@ -78,16 +71,17 @@
                                 {{ question.question_text|truncatechars:100 }}
                             </div>
                         </td>
-                        <td>
-                            {% if question.question_type == 'single' %}
-                                <span class="badge bg-success">
-                                    <i class="fas fa-check-circle me-1"></i>Single
-                                </span>
-                            {% else %}
-                                <span class="badge bg-info">
-                                    <i class="fas fa-check-double me-1"></i>Multiple
-                                </span>
-                            {% endif %}
+                        <td class="answer-column">
+                            {% for choice in question.choices.all %}
+                                {% if choice.is_correct %}
+                                    <div class="mb-1">
+                                        <span class="badge bg-success me-1">{{ choice.option_label }}</span>
+                                        <small>{{ choice.choice_text|truncatechars:30 }}</small>
+                                    </div>
+                                {% endif %}
+                            {% empty %}
+                                <span class="text-muted">No answers</span>
+                            {% endfor %}
                         </td>
                         <td>
                             {% for category in question.categories.all %}
@@ -289,6 +283,21 @@
     }
     .badge {
         font-size: 0.75em;
+    }
+    
+    /* Answer column styles */
+    .answer-column {
+        max-width: 250px;
+    }
+    .answer-column .badge {
+        font-weight: bold;
+    }
+    .answer-column small {
+        color: #6c757d;
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     
     /* Test Modal Styles */
@@ -712,37 +721,29 @@ document.getElementById('searchInput').addEventListener('keyup', function() {
     filterTable();
 });
 
-document.getElementById('typeFilter').addEventListener('change', function() {
-    filterTable();
-});
-
 document.getElementById('categoryFilter').addEventListener('change', function() {
     filterTable();
 });
 
 document.getElementById('resetFilters').addEventListener('click', function() {
     document.getElementById('searchInput').value = '';
-    document.getElementById('typeFilter').value = '';
     document.getElementById('categoryFilter').value = '';
     filterTable();
 });
 
 function filterTable() {
     const searchTerm = document.getElementById('searchInput').value.toLowerCase();
-    const typeFilter = document.getElementById('typeFilter').value;
     const categoryFilter = document.getElementById('categoryFilter').value;
     const rows = document.querySelectorAll('#questionsTable tbody tr');
     
     rows.forEach(function(row) {
         const questionText = row.getAttribute('data-question-text') || '';
-        const questionType = row.getAttribute('data-type') || '';
         const categories = row.getAttribute('data-categories') || '';
         
         const matchesSearch = questionText.includes(searchTerm);
-        const matchesType = typeFilter === '' || questionType === typeFilter;
         const matchesCategory = categoryFilter === '' || categories.includes(categoryFilter + ',');
         
-        if (matchesSearch && matchesType && matchesCategory) {
+        if (matchesSearch && matchesCategory) {
             row.style.display = '';
         } else {
             row.style.display = 'none';
