@@ -1,0 +1,181 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Exam Results - PDF</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+            margin: 20px;
+            font-size: 12px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .summary-row {
+            width: 100%;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            table-layout: fixed;
+            display: table;
+            border-collapse: collapse;
+        }
+        .summary-item {
+            display: table-cell;
+            text-align: center;
+            padding: 8px;
+            width: 20%;
+            vertical-align: middle;
+            border-right: 1px dotted #ccc;
+        }
+        .summary-item:last-child {
+            border-right: none;
+        }
+        .summary-value {
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .summary-label {
+            color: #666;
+            font-size: 12px;
+        }
+        /* Answer label style no longer needed as we're using inline strong tags */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+            padding: 5px;
+            text-align: left;
+            font-size: 12px;
+        }
+        td {
+            padding: 5px;
+            font-size: 12px;
+        }
+        /* Ensure consistent padding throughout tables */
+        .summary-item {
+            padding: 5px;
+            font-size: 12px;
+        }
+        .correct {
+            color: green;
+            font-weight: bold;
+        }
+        .incorrect {
+            color: red;
+        }
+        .not-answered {
+            color: grey;
+        }
+        .question-number {
+            background-color: #eee;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            display: inline-block;
+            text-align: center;
+            line-height: 25px;
+            margin-right: 5px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Taxi Exam - Test Results</h1>
+        <p>Candidate: {{ mock_exam.user.get_full_name|default:mock_exam.user.username }}</p>
+    </div>
+    
+    <h2 style="text-align: center; margin-bottom: 10px;">{{ mock_exam.category.name }}</h2>
+    
+    <table class="summary-row">
+        <tr>
+            <td class="summary-item">
+                <div class="summary-label">Date</div>
+                <div class="summary-value">{{ mock_exam.end_time|date:"F j, Y" }}</div>
+            </td>
+            <td class="summary-item">
+                <div class="summary-label">Score</div>
+                <div class="summary-value">{{ score_percentage }}%</div>
+            </td>
+            <td class="summary-item">
+                <div class="summary-label">Correct Answers</div>
+                <div class="summary-value">{{ correct_answers }}/{{ total_questions }}</div>
+            </td>
+            <td class="summary-item">
+                <div class="summary-label">Time Taken</div>
+                <div class="summary-value">{{ mock_exam.duration }}</div>
+            </td>
+        </tr>
+    </table>
+    
+    <h2>Question Details</h2>
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 50%;">Question</th>
+                <th style="width: 30%;">Answer Details</th>
+                <th style="width: 20%;">Result</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for exam_question in exam_questions %}
+                <tr>
+                    <td>
+                        <span class="question-number">{{ exam_question.order }}</span>
+                        {{ exam_question.question.question_text }}
+                    </td>
+                    <td>
+                        <div style="padding-bottom: -20px;">
+                            <strong>You:</strong> 
+                            {% for choice in exam_question.selected_choices.all %}
+                                {{ choice.option_label }}. {{ choice.choice_text }}{% if not forloop.last %}<br>{% endif %}
+                            {% empty %}
+                                <span class="not-answered">No answer</span>
+                            {% endfor %}
+                        </div>
+                        <div>
+                            <strong>Correct:</strong> 
+                            {% for choice in exam_question.question.choices.all %}
+                                {% if choice.is_correct %}
+                                    {{ choice.option_label }}. {{ choice.choice_text }}{% if not forloop.last %}<br>{% endif %}
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </td>
+                    <td>
+                        {% if exam_question.is_correct %}
+                            <span class="correct">Correct</span>
+                        {% elif exam_question.is_correct is None %}
+                            <span class="not-answered">Not Answered</span>
+                        {% else %}
+                            <span class="incorrect">Incorrect</span>
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    <div class="footer">
+        <p>Generated on {{ now|date:"F j, Y H:i" }}</p>
+        <p>Taxi Exam System</p>
+    </div>
+</body>
+</html>

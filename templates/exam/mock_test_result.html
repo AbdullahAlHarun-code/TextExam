@@ -53,6 +53,9 @@
                         <a href="{% url 'user_report' %}" class="btn btn-outline-primary ms-2">
                             <i class="fas fa-file-invoice me-2"></i>View Full Report
                         </a>
+                        <a href="{% url 'view_mock_test_result' mock_exam.id %}?download=pdf" class="btn btn-danger ms-2">
+                            <i class="fas fa-file-pdf me-2"></i>Download PDF
+                        </a>
                     </div>
                 </div>
             </div>

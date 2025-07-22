@@ -1,12 +1,26 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse
 from django.utils import timezone
 from django.db.models import Count, Avg, F
+from django.template.loader import get_template
 import random
 import json
+from io import BytesIO
+from xhtml2pdf import pisa
+import datetime
 from .models import Category, Question, Choice, MockExam, MockExamQuestion
+
+def render_to_pdf(template_src, context_dict):
+    """Function to render HTML template into a PDF file"""
+    template = get_template(template_src)
+    html = template.render(context_dict)
+    result = BytesIO()
+    pdf = pisa.pisaDocument(BytesIO(html.encode("UTF-8")), result)
+    if not pdf.err:
+        return HttpResponse(result.getvalue(), content_type='application/pdf')
+    return None
 
 @login_required
 def mock_test_categories(request):
@@ -276,8 +290,21 @@ def view_mock_test_result(request, exam_id):
         'score_percentage': mock_exam.score_percentage,
         'correct_answers': mock_exam.correct_answers,
         'total_questions': mock_exam.total_questions,
-        'title': 'Mock Test Results'
+        'title': 'Mock Test Results',
+        'now': timezone.now()
     }
+    
+    # Check if PDF download was requested
+    if request.GET.get('download') == 'pdf':
+        # Generate PDF
+        pdf = render_to_pdf('exam/mock_test_result_pdf.html', context)
+        if pdf:
+            response = HttpResponse(pdf, content_type='application/pdf')
+            filename = f"exam_result_{mock_exam.id}_{timezone.now().strftime('%Y%m%d')}.pdf"
+            content = f"inline; filename={filename}"
+            response['Content-Disposition'] = content
+            return response
+        return HttpResponse("Error generating PDF", status=400)
     
     return render(request, 'exam/mock_test_result.html', context)
 
